@@ -1,0 +1,26 @@
+services:
+  local-streamlit-built:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: local-streamlit:latest
+    command: ["python3", "streamlit_app.py"]
+
+  local-streamlit-run:
+    image: local-streamlit:latest
+    depends_on:
+      - local-streamlit-built
+    ports:
+      - "8501:8501"
+    volumes:
+      - ../:/app
+    environment:
+      STREAMLIT_SERVER_PORT: "8501"
+    command:
+      [
+        "streamlit",
+        "run",
+        "streamlit_app.py",
+        "--server.address=0.0.0.0",
+        "--server.port=8501",
+      ]

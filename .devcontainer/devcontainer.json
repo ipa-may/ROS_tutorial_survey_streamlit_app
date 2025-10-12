@@ -1,0 +1,6 @@
+{
+    "$schema": "https://aka.ms/devcontainer.schema.json",
+    "name": "python_streamlit",
+    "image": "mcr.microsoft.com/devcontainers/python:3.11",
+    "postCreateCommand": "bash .devcontainer/bashrc.sh"
+}

@@ -1,0 +1,25 @@
+# Byte-compiled / interpreter caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# IDE / editor settings
+.mypy_cache/
+.pytest_cache/
+.vscode/
+.idea/
+
+# Dev containers
+.devcontainer/local-history/
+
+# OS-generated files
+.DS_Store
+Thumbs.db

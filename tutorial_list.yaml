@@ -1,0 +1,1049 @@
+- name: dev-containers from articulatedrobotics
+  organization: articulatedrobotics
+  doc-link: https://articulatedrobotinativecs.xyz/tutorials/docker/dev-containers/
+  type: video
+  robot: none
+  language: EN
+  maintainer: articulatedrobotics
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: devcontainer
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - other
+- name: ros2_canopen
+  organization: ROS-Industrial Fraunhofer IPA
+  repo-link: https://github.com/ros-industrial/ros2_canopen
+  doc-link: https://ros-industrial.github.io/ros2_canopen/manual/rolling/
+  type: documentation
+  date: 2025
+  topic:
+    - ros2_control
+    - fieldbus
+  language: EN
+  maintainer: ipa-vsp
+  ros_distro:
+    - humble
+    - jazzy
+    - rolling
+  native: not-defined
+  deployment_docker: docker
+  docker_image_base: ros:$DISTRO$-ros-core
+  overlay: not-defined
+  gui_for_docker: not-defined
+  CI: true
+  robot-type:
+    - other
+- name: Virtual Humanoid RoboCup Open Workshops 2020
+  repo-link: https://gitlab.com/boldhearts/ros2_workshop
+  topic: Humanoid Robots
+  type:
+    - workshop repository
+  date: 2020
+  os: ubuntu 20.04
+  organization: Bold Hearts
+  maintainer: not-defined
+  ros_distro: foxy
+  native: not-defined
+  deployment_docker: null
+  docker_image_base: ros:foxy
+  CI: true
+  language: EN
+  robot-type:
+    - humanoid
+- name: ros2_control workshop 2024
+  repo-link: https://github.com/ros-controls/roscon2024_control_workshop/
+  topic:
+    - ros2_control
+  organization: ros2-controls
+  ros_distro: rolling
+  type:
+    - workshop repository
+  language: EN
+  robot: Tiago
+  date: 2024
+  deployment_docker:
+    - docker
+    - docker-compose
+  docker_image_base: ros:rooling
+  robot-type:
+    - mobile manipulator
+- name: IsaacSim ROS tutorial
+  doc-link: https://docs.isaacsim.omniverse.nvidia.com/5.1.0/ros2_tutorials/ros2_landing_page.html
+  organization: NVIDIA
+  type: handout
+  hardware: PC with Nvidia GPU
+  topic:
+    - ros2_control
+    - Moveit
+    - IsaacSim
+  ros_distro:
+    - humble
+    - jazzy
+  language: EN
+  rmw:
+    - rmw_fastrtps_cpp
+    - rmw_cyclonedds_cpp
+  deployment_docker: docker
+  docker_image_base:
+    - ubuntu:22.04
+    - ubuntu:24.04
+  robot-type:
+    - manipulator
+- name: ros2_control workshop 2025
+  repo-link: https://github.com/ros-controls/roscon2025_control_workshop
+  topic:
+    - ros2_control
+    - plotjuggler
+  robot:
+    - turtlebot3
+    - mobile manipulator
+  date: 2025
+  type: workshop repository
+  hardware: ESP32
+  organization: ros2-controls
+  maintainer: Bence Magyar
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker:
+    - docker
+    - docker-compose
+  docker_image_base: ros:jazzy-ros-core
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - mobile robot
+    - mobile manipulator
+- name: Ethercat ROS Driver
+  repo-link: https://github.com/ICube-Robotics/ethercat_driver_ros2
+  doc-link: https://icube-robotics.github.io/ethercat_driver_ros2/
+  organization: iCube
+  topic:
+    - ros2_control
+    - fieldbus
+  language: EN
+  type: documentation
+  maintainer: not-defined
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - other
+- name: micro ros openmanipulator
+  doc-link: https://micro.ros.org/docs/tutorials/demos/openmanipulator_demo/
+  os: Ubuntu 18.04
+  hardware:
+    - STM32F407
+    - Raspberry Pi 4
+  robot: OpenManipulator
+  topic:
+    - ros2_control
+    - micro-ros
+    - urdf
+    - gazebo
+    - rviz
+    - moveit2
+  type:
+    - workshop repository
+    - handout
+  language: EN
+  organization: micro-ros
+  maintainer: not-defined
+  ros_distro: humble
+  native: not-defined
+  deployment_docker: docker
+  docker_image_base: ros:humble
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - manipulator
+- name: ICube scara tutorial
+  repo-link: https://github.com/ICube-Robotics/scara_tutorial_ros2
+  doc-link: https://github.com/ICube-Robotics/scara_tutorial_ros2/tree/main/resources
+  type:
+    - workshop repository
+    - handout
+  topic:
+    - ros2_control
+    - urdf
+    - gazebo
+    - rviz
+    - moveit2
+  date: 2022
+  language: EN
+  maintainer: not-defined
+  robot: custom scara
+  robot_type: manipulator
+  organization: ICube
+  ros_distro: humble
+  native: native
+  deployment_docker: docker
+  docker_image_base: ros:humble
+  overlay: not-defined
+  gui_for_docker: HTML5 VNC interface
+  CI: false
+  robot-type:
+    - manipulator
+- name: AnfRos2
+  doc-link: https://wiki.2rm.cnrs.fr/AnfRos2/Supports
+  organization: CNRS
+  language: FR
+  type: handout
+  maintainer: not-defined
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - other
+- name: LAAS ROS introduction
+  doc-link: https://homepages.laas.fr/ostasse/Teaching/ROS/ros-introduction.pdf
+  organization: Gepetto LAAS-CNRS
+  type: handout
+  date: 2022
+  topic:
+    - basic
+    - ros2_control
+  maintainer: not-defined
+  os: Ubuntu 20.04
+  ros_distro: humble
+  language: FR
+  native: not-defined
+  deployment_docker: Virtualbox
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - other
+- name: eros4pro training
+  doc-link: https://ros4pro.github.io/eros4pro-training/html/day1/index.html
+  organization:
+    - ros4pro
+    - University of Tartu
+  robot: Ufactory xArm6
+  topic: ROS1, Moveit, Navigation, Gazebo, Arduino
+  language: EN
+  maintainer: Yoan Mollard
+  ros_distro: noetic
+  os: Ubuntu 20.04
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - manipulator
+- name: Clearpath ROS 2 networking workshop 2024
+  repo-link: https://github.com/clearpathrobotics/roscon2024-workshop-demystifying-ros2-networking/tree/main
+  organization: Clearpath Robotics
+  maintainer: Clearpath Robotics
+  topic:
+    - simple discovery
+    - discovery server
+  language: EN
+  deployment_docker: none
+  date: 2024
+  type: handout
+  robot-type:
+    - other
+- name: ros4pro learn
+  repo-link: https://github.com/ros4pro/learn
+  organization: ros4pro
+  language: FR
+  type:
+    - handout
+    - workshop repository
+  robot:
+    - Poppy Ergo Jr
+    - Keras
+    - Turtlebot3
+  date: 2021
+  maintainer: Yoan Mollard
+  topic:
+    - Moveit
+    - Navigation
+    - Perception
+    - Gazebo
+  non-ros-tools:
+    - opencv
+    - pytorch
+  ros_distro: noetic
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - mobile robot
+    - manipulator
+- name: Nav2
+  doc-link: https://docs.nav2.org/getting_started/index.html
+  organization: Navigation
+  language: EN
+  maintainer: not-defined
+  ros_distro: humble,jazzy,rolling
+  native: native
+  deployment_docker: docker,devcontainer
+  docker_image_base: ubuntu:focal
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - mobile robot
+- name: ROBOTIS turtlebot3
+  repo-link: https://github.com/ROBOTIS-GIT/turtlebot3
+  organization: ROBOTIS
+  robot: turtlebot3
+  language: EN
+  maintainer: not-defined
+  ros_distro: [humble, jazzy, noetic]
+  native: native
+  deployment_docker:
+    - docker
+    - docker-compose
+  docker_image_base: osrf/ros:humble-desktop-full
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type: mobile robot
+- name: ROBOTIS turtlebot3 simulations
+  repo-link: https://github.com/ROBOTIS-GIT/turtlebot3_simulations
+  organization: ROBOTIS
+  robot: turtlebot3
+  language: EN
+  maintainer: not-defined
+  ros_distro: [humble, jazzy, noetic]
+  native: native
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type: mobile robot
+- name: ROBOTIS turtlebot3 autorace
+  repo-link: https://github.com/ROBOTIS-GIT/turtlebot3_autorace
+  organization: ROBOTIS
+  type: workshop repository
+  robot: turtlebot3
+  language: EN
+  maintainer: not-defined
+  ros_distro:
+    - noetic
+    - humble
+  native: native
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type: mobile robot
+- name: ROBOTIS turtlebot3 applications
+  repo-link: https://github.com/ROBOTIS-GIT/turtlebot3_applications
+  organization: ROBOTIS
+  hardware:
+    - PC
+    - Jetson Nano
+  robot: turtlebot3
+  language: EN
+  maintainer: not-defined
+  ros_distro:
+    - noetic
+    - humble
+    - rolling
+  native: native
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  CI: true
+  robot-type: mobile robot
+- name: Sorbonne turtlebot4 env docker
+  doc-link: https://gitlabsu.sorbonne-universite.fr/polytech_rob/robots/turtlebot/turtlebot4_env_docker
+  organization: Sorbonne Universite
+  type: workshop repository
+  robot: turtlebot4
+  topic:
+    - Nav2
+    - SLAM
+  language: EN
+  maintainer: not-defined
+  ros_distro: humble
+  native: not-defined
+  deployment_docker:
+    - docker
+    - docker-compose
+  docker_image_base: osrf/ros:humble-desktop-full
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type: mobile robot
+- name: Docker ROS2 in practice
+  repo-link: https://github.com/yguel/docker_ros2_in_practice
+  organization: ICube
+  language: EN
+  topic:
+    - docker setup
+  maintainer: not-defined
+  ros_distro: humble
+  native: native
+  deployment_docker: docker
+  docker_image_base: tiryoh/ros2-desktop-vnc:humble
+  overlay: not-defined
+  gui_for_docker: HTML5 VNC interface
+  robot-type: other
+- name: LAAS polycopie 2022
+  doc-link: https://wiki.2rm.cnrs.fr/AnfRos2/Supports?action=AttachFile&do=view&target=anf-2022-polycopie.pdf
+  organization: LAAS
+  language: FR
+  type: handout
+  maintainer: not-defined
+  ros_distro: humble
+  native: native
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - other
+- name: Sandbox
+  repo-link: https://github.com/rplayground/sandbox
+  organization: Ruffin White
+  maintainer: https://github.com/ruffsl
+  language: EN
+  ros_distro: humble
+  native: not-defined
+  deployment_docker:
+    - docker
+    - devcontainer
+  docker_image_base: ros:humble
+  overlay:
+    - builder
+    - dever
+    - visualizer
+  gui_for_docker: webapp
+  robot-type:
+    - other
+- name: Robotics Essentials ROS2 by Henki Robotics
+  repo-link: https://github.com/henki-robotics/robotics_essentials_ros2
+  organization:
+    - Henki robotics
+    - University of Eastern Finland
+  robot: Andino robot from Ekumen
+  topic:
+    - basics
+    - Nav2
+  language: EN
+  maintainer: not-defined
+  ros_distro: humble
+  native: native,ansible
+  deployment_docker:
+    - docker
+    - docker-compose
+  docker_image_base: osrf/ros:humble-desktop-full
+  overlay: https://github.com/henki-robotics/robotics_essentials_ros2/blob/main/docker/Dockerfile#L14-L17
+  gui_for_docker: local x11 only
+  robot-type:
+    - mobile robot
+- name: Cours et TPs ROS Ynov
+  doc-link: https://robservynov.netlify.app/tp#1
+  organization: Ynov
+  maintainer: Yoan Mollard
+  type: handout
+  language: FR
+  robot-type:
+    - other
+- name: Turtlebot behavior demos
+  repo-link: https://github.com/sea-bass/turtlebot3_behavior_demos
+  robot:
+    - turtlebot3
+    - turtlebot4
+  organization: not-defined
+  language: EN
+  maintainer: https://github.com/sea-bass/
+  ros_distro:
+    - humble
+    - jazzy
+    - rolling
+    - noetic
+  native: native
+  deployment_docker:
+    - docker
+    - docker-compose
+  docker_image_base: ros:${ROS_DISTRO} AS base
+  overlay: dev
+  gui_for_docker: local x11 only
+  CI: true
+  robot-type:
+    - mobile robot
+- name: ROBOTIS turtlebot3 machine learning
+  repo-link: https://github.com/ROBOTIS-GIT/turtlebot3_machine_learning
+  robot: turtlebot3
+  organization: ROBOTIS
+  maintainer: ROBOTIS
+  language: EN
+  ros_distro:
+    - noetic
+    - humble
+    - jazzy
+  native: native
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  CI: true
+  robot-type:
+    - mobile robot
+- name: ROBOTIS turtlebot3 manipulation
+  repo-link: https://github.com/ROBOTIS-GIT/turtlebot3_manipulation
+  organization: ROBOTIS
+  language: EN
+  maintainer: not-defined
+  ros_distro:
+    - kinetic
+    - melodic
+    - noetic
+    - humble
+    - jazzy
+  native: native
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  CI: true
+  robot-type:
+    - mobile manipulator
+- name: ROBOTIS turtlebot3 home service challenge
+  repo-link: https://github.com/ROBOTIS-GIT/turtlebot3_home_service_challenge
+  organization: ROBOTIS
+  language: EN
+  date: 2025
+  maintainer: not-defined
+  ros_distro:
+    - noetic
+    - humble
+    - jazzy
+  native: native
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  CI: true
+  robot-type:
+    - mobile manipulator
+- name: Moveit tutorials
+  doc-link: https://moveit.github.io/moveit_tutorials/
+  organization: PickNik Robotics
+  type:
+    - workshop repository
+    - handout
+  language: EN
+  maintainer: https://github.com/rhaschke
+  ros_distro:
+    - noetic
+    - melodic
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - manipulator
+- name: Moveit2 tutorials
+  doc-link: https://moveit.picknik.ai/main/doc/tutorials/
+  organization: PickNik Robotics
+  type:
+    - workshop repository
+    - handout
+  language: EN
+  maintainer: PickNik Robotics
+  ros_distro:
+    - foxy
+    - galactic
+    - humble
+    - rolling
+  native: not-defined
+  deployment_docker:
+    - docker
+    - docker-compose
+  docker_image_base: moveit/moveit2:${ROS_DISTRO}-source
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - manipulator
+- name: robot modeling by ICube
+  doc-link: https://yguel.github.io/ros2_in_practice/humble/fr/c01_robot_modeling/c01s00_index.html
+  organization: ICube
+  topic:
+    - urdf
+    - xacro
+  language: FR
+  maintainer: Yguel
+  os:
+    - Ubuntu
+    - Windows
+  ros_distro: humble
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - mobile robot
+    - manipulator
+- name: ROS2 tutorials by UPC
+  doc-link: https://sir.upc.edu/projects/ros2tutorials/final_work/index.html
+  organization: Universitat Politecnica de Catalunya
+  robot: UR5e
+  topic:
+    - basics
+    - ros2_control
+    - urdf
+    - gazebo
+    - rviz
+    - moveit2
+  type:
+    - workshop repository
+    - handout
+  date: 2025
+  maintainer: not-defined
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: ROS-Industrial Training
+  doc-link: https://industrial-training-master.readthedocs.io/en/humble/
+  repo-link: https://github.com/ros-industrial/industrial_training/tree/humble/exercises
+  organization: ROS-Industrial SwRI
+  maintainer: not-defined
+  type:
+    - handout
+    - workshop repository
+  ros_distro:
+    - foxy
+    - humble
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+    - mobile robot
+- name: Scan-N-Plan workshop
+  repo-link: https://github.com/ros-industrial-consortium/scan_n_plan_workshop
+  organization: ROS-Industrial SwRI
+  maintainer: ROS-Industrial SwRI
+  type: workshop repository
+  ros_distro:
+    - humble
+    - rolling
+  native: not-defined
+  deployment_docker:
+    - docker
+    - docker-compose
+  docker_image_base: hcr.io/tesseract-robotics/tesseract_ros2
+  overlay: not-defined
+  gui_for_docker: X11 forwarding
+  language: EN
+  robot-type:
+    - manipulator
+- name: Tesseract ROS Workcell
+  repo-link: https://github.com/tesseract-robotics/tesseract_ros_workcell
+  hardware: PC
+  robot:
+    - ABB IRP A
+    - toolchanger
+  type: workshop repository
+  organization: ROS-Industrial SwRI
+  maintainer: ROS-Industrial SwRI
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: none
+  docker_image_base: none
+  overlay: none
+  gui_for_docker: none
+  language: EN
+  robot-type:
+    - manipulator
+- name: Tesseract ROS 2 workspace
+  repo-link: https://github.com/tesseract-robotics/tesseract_ros2
+  doc-link: https://tesseract-docs.readthedocs.io/en/latest/
+  organization: ROS-Industrial SwRI
+  type: workspace
+  maintainer: ROS-Industrial SwRI
+  ros_distro:
+    - foxy
+    - humble
+  native: not-defined
+  deployment_docker:
+    - docker
+    - docker-compose
+  docker_image_base: ghcr.io/tesseract-robotics/tesseract_qt:${TAG}
+  overlay: not-defined
+  gui_for_docker: X11 forwarding
+  language: EN
+  robot-type:
+    - manipulator
+- name: Descartes Tutorial
+  repo-link: https://github.com/ros-industrial-consortium/descartes_tutorials
+  doc-link: https://industrial-training-master.readthedocs.io/en/melodic/_source/session4/Descartes-Path-Planning.html
+  date: 2015
+  organization: ROS-Industrial
+  robot: ABB
+  topic: Motion planning
+  type:
+    - handout
+    - workshop repository
+  maintainer: none
+  ros_distro:
+    - indigo
+    - kinetic
+  language: EN
+  robot-type:
+    - manipulator
+- name: ROS-Industrial Descartes Demo Planning and execution
+  doc-link: https://industrial-training-master.readthedocs.io/en/latest/_source/_archives/demo2/index.html
+  repo-link: https://github.com/ros-industrial/industrial_training/tree/humble/exercises/Descartes_Planning_and_Execution
+  organization: ROS-Industrial SwRI
+  robot: UR5e
+  topic:
+    - Descartes
+    - Moveit
+    - PCL
+    - 3D Sensor
+  maintainer: Jorge Nicho
+  ros_distro: humble
+  native: not-defined
+  deployment_docker: none
+  docker_image_base: none
+  overlay: none
+  gui_for_docker: none
+  language: EN
+  robot-type:
+    - manipulator
+- name: ROS-Industrial Optimization Based Planning
+  doc-link: https://industrial-training-master.readthedocs.io/en/latest/_source/_archives/demo3/index.html
+  repo-link: https://github.com/ros-industrial/industrial_training/tree/humble/exercises/Optimization_Based_Planning
+  organization: ROS-Industrial SwRI
+  topic:
+    - TrajOpt
+    - PCL
+    - 3D Sensor
+  robot: KUKA iiwa
+  maintainer: Matthew Powelson
+  ros_distro:
+    - melodic
+    - humble
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: ROS Additive Manufacturing
+  doc-link: https://institutmaupertuis.gitlab.io/ros_additive_manufacturing/
+  repo-link: https://gitlab.com/InstitutMaupertuis/ros_additive_manufacturing
+  organization: Maupertuis
+  date: 2021
+  maintainer: not-defined
+  ros_distro: melodic
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: Universal Robots ROS 2 driver documentation
+  doc-link: https://docs.universal-robots.com/Universal_Robots_ROS_Documentation/
+  repo-link: https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver
+  organization: UR
+  topic:
+    - Manipulator
+    - ros2_control
+    - Moveit
+    - Gazebo
+  type: documentation
+  maintainer: UR
+  ros_distro:
+    - foxy
+    - galactic
+    - iron
+    - humble
+    - jazzy
+    - kilted
+    - rolling
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: ROS 2 Documentation for Polyscope X
+  doc-link: https://docs.universal-robots.com/polyscopex-ros2/v10.7/index.html
+  organization: UR
+  robot: UR
+  topic:
+    - Manipulator
+    - Polyscope X
+  maintainer: not-defined
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: IPA UR5e cell
+  repo-link: https://github.com/hellantos/ur5e_cell
+  robot: UR
+  topic: Industrial robotics, Moveit2, ROS2
+  status: outdated
+  organization: Fraunhofer IPA
+  maintainer: not-defined
+  ros_distro: humble
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: ROS 2 best practices
+  doc-link: https://ipa326.pages.fraunhofer.de/ros-industrial/ros2_best_practices/
+  organization: IPA
+  maintainer: IPA
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - other
+- name: Fraunhofer IPA & PickNik Robotics UR10e welding demo
+  repo-link: https://github.com/PickNikRobotics/UR10e_welding_demo/pull/47
+  organization:
+    - Fraunhofer IPA
+    - PickNik Robotics
+  maintainer: https://github.com/henningkayser
+  ros_distro:
+    - humble
+    - rolling
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: ABB bringup examples
+  repo-link: https://github.com/ros-industrial/abb_robot_driver/tree/master/abb_robot_bringup_examples
+  organization: TU Delft
+  robot: ABB
+  maintainer: not-defined
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: Jazzy Tiago
+  repo-link: https://gitlab.com/f2m2robserv/jazzy-ros-tiago
+  robot: Tiago
+  organization: not-defined
+  maintainer: Yoan Mollard
+  ros_distro: jazzy
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  CI: false
+  language: EN
+  robot-type:
+    - mobile manipulator
+- name: Humble Tiago
+  repo-link: https://gitlab.com/f2m2robserv/humble-ros-tiago
+  robot: Tiago
+  organization: not-
+  maintainer: Yoan Mollard
+  ros_distro: humble
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - mobile manipulator
+- name: Bras robot Arduino ROS2 IA
+  doc-link: https://innovation.iha.unistra.fr/books/robotique-open-source/chapter/bras-robot-arduino-ros2-ia
+  topic:
+    - Arduino
+    - Machine learning
+    - Modbus
+  organization: Unistra
+  maintainer: not-defined
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: Unitra manipulation Moveit with UR
+  doc-link: https://innovation.iha.unistra.fr/books/robotique-open-source/chapter/4-ros2-manipulation-cobot
+  topic:
+    - UR
+    - Moveit
+  robot: Universal Robot
+  os:
+    - Ubuntu 22.04
+    - Windows 10
+    - Windows 11
+  language: FR
+  date: 2023
+  organization: Unistra
+  maintainer: Gauthier Hentz
+  ros_distro: humble
+  native: not-defined
+  deployment_docker:
+    - docker
+    - VM
+  docker_image_base:
+    - not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  robot-type:
+    - manipulator
+- name: LeRobot Machine learning
+  doc-link: https://innovation.iha.unistra.fr/books/robotique-open-source/page/machine-learning-lerobot-avec-so-arm101
+  robot: LeRobot SO-ARM101
+  organization: Unistra
+  maintainer: not-defined
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: pitasc
+  doc-link: https://pitasc.github.io/
+  topic: Robot control software
+  robot: generic
+  organization: IPA
+  maintainer: Daniel Bargmann
+  ros_distro: noetic
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: IPA322 processit
+  doc-link: not-defined
+  organization: IPA
+  maintainer: not-defined
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: https://github.com/PickNikRobotics/UR10e_welding_demo/issues
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: Moveit Task constructor
+  doc-link: https://moveit.picknik.ai/main/doc/tutorials/pick_and_place_with_moveit_task_constructor/pick_and_place_with_moveit_task_constructor.html
+  topic: Task planning
+  robot: Manipulator
+  type:
+    - workshop repository
+    - handout
+  organization: PickNik
+  maintainer: not-defined
+  ros_distro:
+    - foxy
+    - galactic
+    - humble
+    - rolling
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - manipulator
+- name: ICube Communication tutorial
+  doc-link: https://yguel.github.io/ros2_in_practice/humble/fr/c02_system_communication/c02s00_index.html
+  topic:
+    - DDS
+    - communication
+  language: FR
+  robot: none
+  type: handout
+  maintainer: Yguel
+  organization: ICube
+  ros_distro: humble
+  robot-type:
+    - other
+- name: RosTooling
+  doc-link: https://ipa320.github.io/RosTooling.github.io/
+  type: handout
+  topic: Model-based Engineering
+  organization: not-defined
+  maintainer: not-defined
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - other
+- name: Papyrus
+  doc-link: https://list.cea.fr/en/page/papyrus-outil-open-source-de-modelisation-graphique-uml/
+  topic: Model-based Engineering
+  organization: CEA-List
+  maintainer: not-defined
+  ros_distro: not-defined
+  native: not-defined
+  deployment_docker: not-defined
+  docker_image_base: not-defined
+  overlay: not-defined
+  gui_for_docker: not-defined
+  language: EN
+  robot-type:
+    - other
