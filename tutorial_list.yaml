@@ -1,3 +1,17 @@
+- name: HS Esslingen PCobot tutorials
+  organization: Hochschule Esslingen
+  doc-link: https://robgineer.github.io/cobot/
+  repo-link: https://github.com/robgineer/cobot
+  type: [handout, workshop repository]
+  language: EN
+  robot: PCobot
+  maintainer: robgineer
+  topic: basics, ros2_control, urdf, Gazebo, rviz, Moveit
+  ros-distro: jazzy
+  deployment_docker: devcontainer, docker
+  docker_image_base: tiryoh/ros2-desktop-vnc:jazzy
+  overlay: none
+  robot-type: manipulator
 - name: dev-containers from articulatedrobotics
   organization: articulatedrobotics
   doc-link: https://articulatedrobotinativecs.xyz/tutorials/docker/dev-containers/
