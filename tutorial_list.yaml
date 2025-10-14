@@ -7,11 +7,12 @@
   robot: PCobot
   maintainer: robgineer
   topic: basics, ros2_control, urdf, Gazebo, rviz, Moveit
-  ros-distro: jazzy
+  ros_distro: jazzy
   deployment_docker: devcontainer, docker
   docker_image_base: tiryoh/ros2-desktop-vnc:jazzy
   overlay: none
   robot-type: manipulator
+  gui_for_docker: VNC interface
 - name: dev-containers from articulatedrobotics
   organization: articulatedrobotics
   doc-link: https://articulatedrobotinativecs.xyz/tutorials/docker/dev-containers/
