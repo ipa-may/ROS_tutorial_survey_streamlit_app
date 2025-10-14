@@ -21,7 +21,7 @@
   date: 2025
   topic:
     - ros2_control
-    - fieldbus
+    - Fieldbus
   language: EN
   maintainer: ipa-vsp
   ros_distro:
@@ -123,7 +123,7 @@
   organization: iCube
   topic:
     - ros2_control
-    - fieldbus
+    - Fieldbus
   language: EN
   type: documentation
   maintainer: not-defined
@@ -146,9 +146,9 @@
     - ros2_control
     - micro-ros
     - urdf
-    - gazebo
+    - Gazebo
     - rviz
-    - moveit2
+    - Moveit
   type:
     - workshop repository
     - handout
@@ -172,14 +172,14 @@
   topic:
     - ros2_control
     - urdf
-    - gazebo
+    - Gazebo
     - rviz
-    - moveit2
+    - Moveit
   date: 2022
   language: EN
   maintainer: not-defined
   robot: custom scara
-  robot_type: manipulator
+  robot-type: manipulator
   organization: ICube
   ros_distro: humble
   native: native
@@ -188,8 +188,6 @@
   overlay: not-defined
   gui_for_docker: HTML5 VNC interface
   CI: false
-  robot-type:
-    - manipulator
 - name: AnfRos2
   doc-link: https://wiki.2rm.cnrs.fr/AnfRos2/Supports
   organization: CNRS
@@ -210,7 +208,7 @@
   type: handout
   date: 2022
   topic:
-    - basic
+    - basics
     - ros2_control
   maintainer: not-defined
   os: Ubuntu 20.04
@@ -601,9 +599,9 @@
     - basics
     - ros2_control
     - urdf
-    - gazebo
+    - Gazebo
     - rviz
-    - moveit2
+    - Moveit
   type:
     - workshop repository
     - handout
@@ -716,7 +714,7 @@
   organization: ROS-Industrial SwRI
   robot: UR5e
   topic:
-    - Descartes
+    - Descartes path planner
     - Moveit
     - PCL
     - 3D Sensor
@@ -813,7 +811,7 @@
 - name: IPA UR5e cell
   repo-link: https://github.com/hellantos/ur5e_cell
   robot: UR
-  topic: Industrial robotics, Moveit2, ROS2
+  topic: Industrial robotics, Moveit, ROS2
   status: outdated
   organization: Fraunhofer IPA
   maintainer: not-defined
