@@ -15,7 +15,7 @@
   gui_for_docker: VNC interface
 - name: dev-containers from articulatedrobotics
   organization: articulatedrobotics
-  doc-link: https://articulatedrobotinativecs.xyz/tutorials/docker/dev-containers/
+  doc-link: https://articulatedrobotics.xyz/tutorials/docker/dev-containers/
   type: video
   robot: none
   language: EN
