@@ -8,32 +8,32 @@ It may also deserve the purpose of pushing the adoption of Open Source Robotics 
 
 
 ## Description of fields qualifying the Training Material
-- name: Description of the Training Material
-- organization: Owner of the Material, ex. 
-- organization_type: [company,university,laboratory,individual], etc, ex. 
-- organization_country: [de,us,es,fr,gb,it], etc, ex. 
-- maintainer: Contact of known expert contributors/maintainers, ex. robgineer
-- user: Contact of known trainers/users
-- intro: Introduction page to the material, on e.g. ROS Discourse, ex. https://henkirobotics.com/robotics-and-ros-2-essentials-course-announcement/ https://discourse.openrobotics.org/t/mini-workshop-developing-and-teaching-ros-from-a-web-browser-using-dev-containers-and-pwas/31533
-- doc: Documentation URL, ex. https://robgineer.github.io/cobot/
-- doc_type: [pdf, sphynx, markdown, workshop repository]
-- language: [de,en,es,fr,gb,it],etc
-- technology: manipulation, navigation, perception, 
-- application: Robotics application in the material, ex. welding, pickplace, 
-- robot: [ur5e,ur10e,panda] PCobot
-- stack: [basics, ros2_control, urdf, gazebo, rviz2, moveit, moveit2, nav2, tesseract]
-- repo: Code URL, ex. https://github.com/robgineer/cobot
+- `name`: Description of the Training Material
+- `organization`: Owner of the Material, ex. 
+- `organization_type`: `[company,university,laboratory,individual]`, etc, ex. 
+- `organization_country`: `[de,us,es,fr,gb,it]`, etc, ex. 
+- `maintainer`: Contact of known expert contributors/maintainers, ex. robgineer
+- `user`: Contact of known trainers/users
+- `intro`: Introduction page to the material, on e.g. ROS Discourse, ex. https://henkirobotics.com/robotics-and-ros-2-essentials-course-announcement/ https://discourse.openrobotics.org/t/mini-workshop-developing-and-teaching-ros-from-a-web-browser-using-dev-containers-and-pwas/31533
+- `doc`: Documentation URL, ex. https://robgineer.github.io/cobot/
+- `doc_type`: `[pdf, sphynx, markdown, workshop repository]`
+- `language`: `[de,en,es,fr,gb,it]`,etc
+- `technology`: `[manipulation, navigation, perception]`
+- `application`: `[welding, pickplace,palletizing,conveying]` Robotics application in the material  
+- `robot`: `[ur5e,ur10e,panda]` PCobot
+- `stack`: `[basics, ros2_control, urdf, gazebo, rviz2, moveit, moveit2, nav2, tesseract]`
+- `repo`: Code URL, ex. https://github.com/robgineer/cobot
   - Note: Some automated scrapping is impremented for GitHub repos
-- repo_type: ??
-- packages: Software packages
-- distro: [humble,jazzy,rolling] ROS distro or other specific OS
-- deploy_native: bash,iso,fai (https://fai-project.org/)
-- deploy_gui: [x11forward,tigervnc,webapp]
-- deploy_specifics: devcontainer,virtualbox,clusterssh
-- deploy_docker: dockerfile,dockercompose,
-- docker_image_base: tiryoh/ros2-desktop-vnc:jazzy
-- docker_overlay: none
-- legacy: [true,false], The Material is not considered relevant enough anymore, and will not display on the website
+- `repo_type`: ??
+- `packages`: Software packages
+- `distro`: `[humble,jazzy,rolling]` ROS distro or other specific OS
+- `deploy_native`: `[bash,iso,fai]` (https://fai-project.org/)
+- `deploy_gui`: `[x11forward,tigervnc,webapp]`
+- `deploy_specifics`: `[devcontainer,virtualbox,clusterssh]`
+- `deploy_docker`: `[dockerfile,dockercompose]`
+- `docker_image_base`: `tiryoh/ros2-desktop-vnc:jazzy`
+- `docker_overlay`: none
+- `legacy`: `[true,false]`, The Material is not considered relevant enough anymore, and will not display on the website
 
 ## Governance
 This repo is hosted under https://github.com/ROS-French-Users-Group which currently gathers French speaking researchers, teachers and engineers from different institutions, mostly public Research Institutes and Universities. This GitHub organization is cross-organizational and closely related to the Association [FUSER](https://discourse.openrobotics.org/t/association-francophone-des-utilisateurs-du-systeme-dexploitation-robotique/37918) founded to help people organize ROSConFR. 
