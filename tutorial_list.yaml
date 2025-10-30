@@ -91,7 +91,7 @@
   gui_for_docker: VNC interface
 - name: dev-containers from articulatedrobotics
   organization: articulatedrobotics
-  doc-link: https://articulatedrobotinativecs.xyz/tutorials/docker/dev-containers/
+  doc-link: https://articulatedrobotics.xyz/tutorials/docker/dev-containers/
   type: video
   robot: none
   language: EN
@@ -497,7 +497,8 @@
   gui_for_docker: not-defined
   robot-type:
     - other
-- name: Sandbox
+- name: Mini Workshop developing and teaching ROS from a web browser using Dev Containers and PWAs
+  doc-link: https://discourse.openrobotics.org/t/mini-workshop-developing-and-teaching-ros-from-a-web-browser-using-dev-containers-and-pwas/31533
   repo-link: https://github.com/rplayground/sandbox
   organization: Ruffin White
   maintainer: https://github.com/ruffsl

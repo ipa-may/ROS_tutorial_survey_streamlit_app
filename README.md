@@ -1,4 +1,65 @@
-# ROS Tutorial Catalog
+# ROS Training Material Survey
+
+## Why this repo ?
+The repo was created by Yasmine Makkaoui (Fraunhofer IPA) and Gauthier Hentz (Université de Strasbourg) as a contribution to their talk at ROSCon FR&DE 2025 entitled "How to start teaching ROS2 in 2025 ?"
+Its aim is to help people find most relevant Material when starting to Teach and Use Open Source Robotics with the diversity of technologies, applications, hardware and software stacks available.
+We hope it will push external contributions to the best Open Source Robotics Training Material.
+It may also deserve the purpose of pushing the adoption of Open Source Robotics Toolchains for demonstrations and industrial applications.
+
+
+## Description of fields qualifying the Training Material
+- `name`: Description of the Training Material
+- `organization`: Owner of the Material, ex. 
+- `organization_type`: `[company,university,laboratory,individual]`, etc, ex. 
+- `organization_country`: `[de,us,es,fr,gb,it]`, etc, ex. 
+- `maintainer`: Contact of known expert contributors/maintainers, ex. robgineer
+- `user`: Contact of known trainers/users
+- `intro`: Introduction page to the material, on e.g. ROS Discourse, ex. https://henkirobotics.com/robotics-and-ros-2-essentials-course-announcement/ https://discourse.openrobotics.org/t/mini-workshop-developing-and-teaching-ros-from-a-web-browser-using-dev-containers-and-pwas/31533
+- `doc`: Documentation URL, ex. https://robgineer.github.io/cobot/
+- `doc_type`: `[pdf, sphynx, markdown, workshop repository]`
+- `language`: `[de,en,es,fr,gb,it]`,etc
+- `technology`: `[manipulation, navigation, perception]`
+- `application`: `[welding, pickplace,palletizing,conveying]` Robotics application in the material  
+- `robot`: `[ur5e,ur10e,panda]` PCobot
+- `stack`: `[basics, ros2_control, urdf, gazebo, rviz2, moveit, moveit2, nav2, tesseract]`
+- `repo`: Code URL, ex. https://github.com/robgineer/cobot
+  - Note: Some automated scrapping is impremented for GitHub repos
+- `repo_type`: ??
+- `packages`: Software packages
+- `distro`: `[humble,jazzy,rolling]` ROS distro or other specific OS
+- `deploy_native`: `[bash,iso,fai]` (https://fai-project.org/)
+- `deploy_gui`: `[x11forward,tigervnc,webapp]`
+- `deploy_specifics`: `[devcontainer,virtualbox,clusterssh]`
+- `deploy_docker`: `[dockerfile,dockercompose]`
+- `docker_image_base`: `tiryoh/ros2-desktop-vnc:jazzy`
+- `docker_overlay`: none
+- `legacy`: `[true,false]`, The Material is not considered relevant enough anymore, and will not display on the website
+
+## Governance
+This repo is hosted under https://github.com/ROS-French-Users-Group which currently gathers French speaking researchers, teachers and engineers from different institutions, mostly public Research Institutes and Universities. This GitHub organization is cross-organizational and closely related to the Association [FUSER](https://discourse.openrobotics.org/t/association-francophone-des-utilisateurs-du-systeme-dexploitation-robotique/37918) founded to help people organize ROSConFR. 
+Permissions on the repo are shared with the ROS-Industrial organization https://github.com/ros-industrial/, which gathers mostly Ros Community members from the USA, Germany, the Netherlands, Austria, Singapore and Japan. ROS-Industrial consists of three consortia led by Frauhofer IPA in Stuttgart, Germany for the Consortium Europe, South-West Research Institute in San Antonio, USA for the Consortium North-America and ARTC in Singapore for the Consortium Asia-Pacific, see https://rosindustrial.org/ric-eu . We hope the criteria below will enable objective maintenance of the recommended Material.
+
+## Criteria
+
+The criteria for Material to be included in the list are as follows:
+- Material should be Open Source, under licence... and theirs maintainers open to relevant contribution.
+- We do not include Material dedicated to very specific software packages, such as a driver user documentation, but rather focus on Material that enables solving a robotics application.
+- We do include Material provided by the ROS Stack communities (WG), e.g. ROS2, Nav2, MoveIt2, ROS2-Control Tutorials, as they serve as a primary reference for many other Material, and it allows to follow and compare their Best Practices.
+- Ideally, there should be a public reference to the Material (e.g. on its organization website, or on Open Robotics Discourse) to prevent us from advertising material that "is not really Open Source" or presents a high "risk to disappear".
+- We encourage even recent initiatives even if they have not proven long term maintenance. Hence, we think these are the ones that require high visibility to develop a community. 
+- Material that is not considered relevant anymore will be marked as `legacy` and removed from the published website. Legacy Material will still be searchable from the `.yaml` file.
+
+Criteria considered for evaluating the relevance of Material:
+- Sufficiently maintained: number of maintainers, contributors, last contribution date, ROS distro, open to contribution
+- Popular: number of users, github stars, maintained by reknown ROS contributor
+- Doc or Repo relative quality : better than that of other Materials covering similar contents
+- Contents poorly covered by other Materials: Applications, technologies, robots or stacks not adressed
+- Good quality documentation: with limited scope and a given target group in mind
+- Good quality repo: distro coverage, easy deployment
+
+# Contribute to ROS Tutorial Catalog
+If suggesting a relevant change, make sure to hint how you're related to the Material. Are you a Maintainer ? A member of the organization ? A User ? A simple tester ?
+Send a Pull Request with additions, modifications or removals. 
 
 Streamlit interface for exploring tutorials listed in [`tutorial_list.yaml`](tutorial_list.yaml). Use the options below to run and develop the app with Docker Compose, VS Code Dev Containers, or a local Python environment.
 
@@ -46,8 +107,8 @@ Streamlit interface for exploring tutorials listed in [`tutorial_list.yaml`](tut
 
 ## Adding Tutorials
 
-- Edit [`tutorial_list.yaml`](tutorial_list.yaml); each entry is a YAML mapping describing one tutorial
-- Required fields: `name`, `organization`, and at least one of `doc-link` or `repo-link`
-- Optional metadata (e.g., `language`, `ros_distro`, `robot-type`) improves filtering and analytics in the app
-- Values that can take multiple items (like `ros_distro`, `robot-type`) may be written as YAML lists or comma-separated strings
+- Edit [`tutorial_list.yaml`](tutorial_list.yaml); each entry is a YAML mapping describing a Training Material
+- Required fields: `name`, `organization`, and at least one of `doc` or `repo`
+- Optional metadata (e.g., `language`, `distro`, `robot`) improves filtering and analytics in the app
+- Values that can take multiple items (like `distro`, `robot`) may be written as YAML lists or comma-separated strings
 - After saving, restart or refresh the Streamlit app to load the new entry
