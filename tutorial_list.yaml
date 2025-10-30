@@ -1,3 +1,79 @@
+- name: ACM SIGSOFT Summer School for Software Engineering in Robotics 2025
+  organization: [URJC, TU Delft]
+  date: 2025
+  repo-link: [https://github.com/IntelligentRoboticsLabs/docker_infrastructure]
+  doc-link: https://kas-lab.github.io/se_robotics_school/2025/
+  language: EN
+  deployment_docker: docker
+  robot: Mirte
+  robot-type: mobile manipulator
+  docker_image_base: ghcr.io/kas-lab/mirte_playground:main
+  topic:
+    - basics
+    - PDDL
+    - SMC Storm
+    - Nav2
+- name: Automated and Connected Driving Course Notebooks
+  organization: RWTH Aachen
+  date: 2023
+  repo-link: https://github.com/ika-rwth-aachen/acdc-notebooks
+  language: EN
+  robot-type: automomous vehicle
+  topic:
+    - basics
+    - Sensor Data processing,
+    - Object fusion,
+    - trajectory planning,
+    - trajectory control,
+  ros_distro: noetic
+- name: yolo_ros
+  organization: Universidad de León
+  date: 2025
+  repo-link: https://github.com/mgonzs13/yolo_ros
+  type: workshop repository
+  language: EN
+  ros_distro: [humble, iron, jazzy, kilted, rolling]
+  robot-type: other
+  native: yes
+  deployment_docker: docker
+  docker_image_base: ros:${ROS_DISTRO}
+  overlay: builder
+  gui_for_docker: not-defined
+  CI: true
+  maintainer: mgonzs13
+- name: Robotics exercices at URJC
+  organization: URJC
+  doc-link:
+  repo-link: https://github.com/rodperex/robotics_exercises
+  type: [handout, workshop repository]
+  language: ES
+  robot: Kobuki
+  topic: [basics, urdf, Gazebo, Nav2]
+  robot-type: mobile robot
+  ros_distro: jazzy
+  maintainer: José Miguel Guerrero
+- name: Computer Vision at URJC
+  organization: URJC
+  date: 2024
+  doc-link:
+  repo-link: https://github.com/jmguerreroh/vision
+  type: [handout, workshop repository]
+  language: ES
+  robot: Kobuki
+  topic: [openCV, PCL, Machine Learning]
+  robot-type: other
+  ros_distro: [jazzy, rolling]
+  maintainer: José Miguel Guerrero
+  CI: true
+- name: ROS-I Academy FH Aachen
+  organization: Hochschule Aachen
+  doc-link: https://ros2.fh-aachen.de/index.html
+  type: [handout]
+  language: EN
+  robot: Turtlebot3
+  topic: [basics, urdf, Gazebo, Nav2]
+  robot-type: mobile robot
+  ros_distro: humble
 - name: HS Esslingen PCobot tutorials
   organization: Hochschule Esslingen
   doc-link: https://robgineer.github.io/cobot/
@@ -6,7 +82,7 @@
   language: EN
   robot: PCobot
   maintainer: robgineer
-  topic: basics, ros2_control, urdf, Gazebo, rviz, Moveit
+  topic: [basics, ros2_control, urdf, Gazebo, rviz, Moveit]
   ros_distro: jazzy
   deployment_docker: devcontainer, docker
   docker_image_base: tiryoh/ros2-desktop-vnc:jazzy
