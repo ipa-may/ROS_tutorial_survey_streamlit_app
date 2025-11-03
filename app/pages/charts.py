@@ -12,10 +12,10 @@ def show_charts(dataframe: pd.DataFrame) -> None:
 
     factory = ChartFactory()
 
-    _render_deployment_chart(factory, dataframe.get("deployment_docker", pd.Series(dtype=str)))
-    _render_robot_type_chart(factory, dataframe.get("robot-type", pd.Series(dtype=str)))
+    _render_deployment_chart(factory, dataframe.get("deploy_docker", pd.Series(dtype=str)))
+    _render_technology_chart(factory, dataframe.get("technology", pd.Series(dtype=str)))
     _render_language_chart(factory, dataframe.get("language", pd.Series(dtype=str)))
-    _render_distro_chart(factory, dataframe.get("ros_distro", pd.Series(dtype=str)))
+    _render_distro_chart(factory, dataframe.get("distro", pd.Series(dtype=str)))
 
 
 def _render_deployment_chart(factory: ChartFactory, column: pd.Series) -> None:
@@ -29,12 +29,12 @@ def _render_deployment_chart(factory: ChartFactory, column: pd.Series) -> None:
     st.vega_lite_chart(data, spec, use_container_width=True)
 
 
-def _render_robot_type_chart(factory: ChartFactory, column: pd.Series) -> None:
-    """Render the donut chart summarizing robot types."""
-    st.subheader("Robot Type Distribution")
-    data, spec = factory.robot_type_distribution(column)
+def _render_technology_chart(factory: ChartFactory, column: pd.Series) -> None:
+    """Render the donut chart summarizing robotics technologies."""
+    st.subheader("Robotics Technology Distribution")
+    data, spec = factory.technology_distribution(column)
     if data.empty:
-        st.info("No robot type information available.")
+        st.info("No robotics technology information available.")
         return
 
     st.vega_lite_chart(data, spec, use_container_width=True)
@@ -54,7 +54,7 @@ def _render_language_chart(factory: ChartFactory, column: pd.Series) -> None:
 def _render_distro_chart(factory: ChartFactory, column: pd.Series) -> None:
     """Render the bar chart summarizing ROS distros."""
     st.subheader("ROS Distro Coverage")
-    data, spec = factory.ros_distro_distribution(column)
+    data, spec = factory.distro_distribution(column)
     if data.empty:
         st.info("No ROS distro information available.")
         return

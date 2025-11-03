@@ -34,15 +34,15 @@ class ChartFactory:
         """Return data and spec for the deployment distribution donut chart."""
         return self._donut_distribution(column, title="Deployment")
 
-    def robot_type_distribution(self, column: pd.Series) -> tuple[pd.DataFrame, dict]:
-        """Return data and spec for the robot-type donut chart."""
-        return self._donut_distribution(column, title="Robot Type")
+    def technology_distribution(self, column: pd.Series) -> tuple[pd.DataFrame, dict]:
+        """Return data and spec for the robotics technology donut chart."""
+        return self._donut_distribution(column, title="Robotics Technology")
 
     def language_distribution(self, column: pd.Series) -> tuple[pd.DataFrame, dict]:
         """Return data and spec for the language donut chart."""
         return self._donut_distribution(column, title="Language")
 
-    def ros_distro_distribution(self, column: pd.Series) -> tuple[pd.DataFrame, dict]:
+    def distro_distribution(self, column: pd.Series) -> tuple[pd.DataFrame, dict]:
         """Return data and spec for the ROS distro bar chart."""
         counts = value_counts_from_column(column)
         if counts.empty:
