@@ -93,7 +93,7 @@
   docker_image_base: tiryoh/ros2-desktop-vnc:jazzy
   technology: manipulation
   deploy_gui: VNC interface
-- name: dev-containers from articulatedrobotics
+- name: dev-containers tutorial
   organization: articulatedrobotics
   governance: individual
   country: au
@@ -123,7 +123,7 @@
     - jazzy
     - rolling
   deploy_docker: dockerfile
-  docker_image_base: ros:$DISTRO$-ros-core
+  docker_image_base: ros:${ROS_DISTRO}-ros-core
   deploy_gui: not-defined
   ci: true
   technology: fieldbus
@@ -210,10 +210,9 @@
   stack: ros2_control
   language: en
   doc_type: documentation
-  maintainer: not-defined
-  distro: not-defined
-  deploy_docker: not-defined
-  deploy_gui: not-defined
+  maintainer: github.com/yguel
+  distro: [humble]
+  ci: true
   technology: fieldbus
 - name: micro ros openmanipulator
   organization: micro-ROS
@@ -245,8 +244,8 @@
   stack: [ros2_control,urdf,gazebo,rviz,moveit]
   date: 2022
   language: en
-  maintainer: https://github.com/mcbed
-  robot: custom scara
+  maintainer: github.com/mcbed
+  robot: scara
   technology: manipulation
   distro: humble
   deploy_native: bash
@@ -255,7 +254,7 @@
   docker_image_base: ros:humble
   deploy_gui: HTML5 VNC interface
   ci: false
-- name: AnfRos2
+- name: Action nationale de formation ROS2 2022
   doc: https://wiki.2rm.cnrs.fr/AnfRos2/Supports
   organization: CNRS
   governance: laboratory
@@ -268,6 +267,19 @@
   deploy_gui: not-defined
   technology:
     - other
+- name: Action nationale de formation ROS2 2022 - LAAS polycopie
+  doc: https://wiki.2rm.cnrs.fr/AnfRos2/Supports?action=AttachFile&do=view&target=anf-2022-polycopie.pdf
+  organization: LAAS
+  governance: laboratory
+  country: fr
+  language: fr
+  doc_type: handout
+  maintainer: not-defined
+  distro: humble
+  deploy_native: bash
+  deploy_docker: not-defined
+  deploy_gui: not-defined
+  technology: other
 - name: LAAS ROS introduction
   doc: https://homepages.laas.fr/ostasse/Teaching/ROS/ros-introduction.pdf
   organization: Gepetto LAAS-CNRS
@@ -276,11 +288,10 @@
   doc_type: handout
   date: 2022
   stack: [basics,ros2_control]
-  maintainer: not-defined
+  maintainer: github.com/olivier-stasse
   distro: humble
   language: fr
-  deploy_docker: Virtualbox
-  deploy_gui: not-defined
+  deploy_specifics: Virtualbox
   technology:
     - other
 - name: ros4pro learn
@@ -329,6 +340,8 @@
   doc: https://docs.nav2.org/getting_started/index.html
   organization: Open Navigation LLC
   country: us
+  robot: turtlebot3
+  stack: [nav2]
   language: en
   maintainer: not-defined
   distro: humble,jazzy,rolling
@@ -352,6 +365,7 @@
     - docker-compose
   docker_image_base: osrf/ros:humble-desktop-full
   deploy_gui: not-defined
+  ci: true
   technology: [navigation]
 - name: ROBOTIS turtlebot3 simulations
   repo: https://github.com/ROBOTIS-GIT/turtlebot3_simulations
@@ -365,6 +379,7 @@
   deploy_native: bash
   deploy_docker: not-defined
   deploy_gui: not-defined
+  ci: true
   technology: [navigation]
 - name: ROBOTIS turtlebot3 autorace
   repo: https://github.com/ROBOTIS-GIT/turtlebot3_autorace
@@ -381,6 +396,7 @@
   deploy_native: bash
   deploy_docker: not-defined
   deploy_gui: not-defined
+  ci: true
   technology: [navigation]
 - name: ROBOTIS turtlebot3 applications
   repo: https://github.com/ROBOTIS-GIT/turtlebot3_applications
@@ -417,13 +433,12 @@
   deploy_docker: not-defined
   deploy_gui: not-defined
   ci: true
-  technology: [navigation]
+  technology: [navigation,machine_learning]
 - name: ROBOTIS turtlebot3 manipulation
   repo: https://github.com/ROBOTIS-GIT/turtlebot3_manipulation
   organization: ROBOTIS
   governance: company
   country: kr
-  country: fr
   language: en
   maintainer: not-defined
   distro:
@@ -481,7 +496,7 @@
   distro: humble
   deploy_docker: dockerfile
   docker_image_base: tiryoh/ros2-desktop-vnc:humble
-  deploy_gui: HTML5 VNC interface
+  deploy_gui: [x11vnc,html5,novnc]
 - name: ROS2 in practice
   doc: https://yguel.github.io/ros2_in_practice
   doc_type: sphinx
@@ -510,19 +525,6 @@
   maintainer: github.com/yguel
   distro: [jazzy]
   technology: [manipulation]
-- name: LAAS polycopie 2022
-  doc: https://wiki.2rm.cnrs.fr/AnfRos2/Supports?action=AttachFile&do=view&target=anf-2022-polycopie.pdf
-  organization: LAAS
-  governance: laboratory
-  country: fr
-  language: fr
-  doc_type: handout
-  maintainer: not-defined
-  distro: humble
-  deploy_native: bash
-  deploy_docker: not-defined
-  deploy_gui: not-defined
-  technology: other
 - name: Mini Workshop developing and teaching ROS from a web browser using Dev Containers and PWAs
   doc: https://discourse.openrobotics.org/t/mini-workshop-developing-and-teaching-ros-from-a-web-browser-using-dev-containers-and-pwas/31533
   repo: https://github.com/rplayground/sandbox
@@ -600,22 +602,43 @@
   organization: PickNik Robotics
   governance: company
   country: us
+  robot: franka_panda
   doc_type:
     - workshop repository
     - handout
   language: en
-  maintainer: https://github.com/rhaschke
+  maintainer: github.com/rhaschke
   distro:
     - noetic
     - melodic
   deploy_docker: not-defined
   deploy_gui: not-defined
+  ci: true
+  technology: [manipulation]
+- name: MoveIt Task Constructor (MTC) documentation
+  doc: https://moveit.github.io/moveit_task_constructor/
+  repo: https://github.com/moveit/moveit_task_constructor
+  organization: MoveIt
+  governance: community
+  country: us
+  robot: franka_panda
+  doc_type: sphinx
+  language: en
+  maintainer: github.com/rhaschke
+  distro:
+    - noetic
+    - melodic
+  deploy_docker: not-defined
+  deploy_gui: not-defined
+  ci: true
   technology: [manipulation]
 - name: Moveit2 tutorials
   doc: https://moveit.picknik.ai/main/doc/tutorials/
+  repo: https://github.com/moveit/moveit2_tutorials
   organization: PickNik Robotics
   governance: company
   country: us
+  robot: franka_panda
   doc_type:
     - workshop repository
     - handout
@@ -631,6 +654,7 @@
     - docker-compose
   docker_image_base: moveit/moveit2:${ROS_DISTRO}-source
   deploy_gui: not-defined
+  ci: true
   technology: [manipulation]
 - name: ROS2 tutorials by UPC
   doc: https://sir.upc.edu/projects/ros2tutorials/final_work/index.html
@@ -752,7 +776,7 @@
   governance: consortium
   country: us
   stack: [trajopt,pcl,3d_sensor]
-  robot: KUKA iiwa
+  robot: kuka_iiwa
   maintainer: Matthew Powelson
   distro:
     - melodic
@@ -810,7 +834,8 @@
   repo: https://github.com/hellantos/ur5e_cell
   robot: UR
   stack: [basics,moveit,ur]
-  status: outdated
+  robot: ur5e
+  legacy: true
   organization: Fraunhofer IPA
   governance: laboratory
   country: de
@@ -837,14 +862,14 @@
     - Fraunhofer IPA
     - PickNik Robotics
   country: [de,us]
-  maintainer: https://github.com/henningkayser
   distro:
     - humble
     - rolling
   deploy_docker: not-defined
   deploy_gui: not-defined
   language: en
-  technology: [manipulation]
+  technology: [manipulation,perception]
+  application: welding
 - name: ABB bringup examples
   repo: https://github.com/ros-industrial/abb_robot_driver/tree/master/abb_robot_bringup_examples
   organization: ROS-Industrial, TU Delft
