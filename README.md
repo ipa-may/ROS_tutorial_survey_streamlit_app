@@ -12,7 +12,7 @@ It may also deserve the purpose of pushing the adoption of Open Source Robotics 
 - `organization`: Owner of the Material
 - `date`: Creation or last major update year
 - `governance`: `[company,consortium,laboratory,university,community,individual]`, ex. Fraunhofer IPA or ICube as `laboratory`, ROS-Industrial or [ros-controls](https://control.ros.org/rolling/doc/governance/governance.html) (OSRA) as `consortium`
-- `organization_country`: `[de,us,es,fr,gb,it]`
+- `country`: `[de,us,es,fr,gb,it]`
 - `maintainer`: Contact of known expert contributors/maintainers, e.g. GitHub handle or email
 - `user`: Contact of known trainers/users, e.g. GitHub handle or email
 - `intro`: Introduction page to the Material, e.g. on [ROS Discourse](https://discourse.openrobotics.org/t/mini-workshop-developing-and-teaching-ros-from-a-web-browser-using-dev-containers-and-pwas/31533) or organization website
