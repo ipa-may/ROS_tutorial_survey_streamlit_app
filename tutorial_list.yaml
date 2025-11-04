@@ -1,6 +1,7 @@
 - name: ACM SIGSOFT Summer School for Software Engineering in Robotics 2025
   organization: [URJC, TU Delft]
   governance: university
+  country: [es,nl]
   date: 2025
   repo: [https://github.com/IntelligentRoboticsLabs/docker_infrastructure]
   doc: https://kas-lab.github.io/se_robotics_school/2025/
@@ -13,6 +14,7 @@
 - name: Automated and Connected Driving Course Notebooks
   organization: RWTH Aachen
   governance: university
+  country: de
   date: 2023
   repo: https://github.com/ika-rwth-aachen/acdc-notebooks
   language: en
@@ -22,6 +24,7 @@
 - name: yolo_ros
   organization: Universidad de León
   governance: university
+  country: es
   date: 2025
   repo: https://github.com/mgonzs13/yolo_ros
   doc_type: workshop repository
@@ -36,6 +39,7 @@
   maintainer: mgonzs13
 - name: Robotics exercices at URJC
   organization: URJC
+  country: es
   governance: university
   doc:
   repo: https://github.com/rodperex/robotics_exercises
@@ -49,6 +53,7 @@
 - name: Computer Vision at URJC
   organization: URJC
   governance: university
+  country: es
   date: 2024
   doc:
   repo: https://github.com/jmguerreroh/vision
@@ -63,6 +68,7 @@
 - name: ROS-I Academy FH Aachen
   organization: Hochschule Aachen
   governance: university
+  country: de
   doc: https://ros2.fh-aachen.de/index.html
   doc_type: [handout]
   language: en
@@ -73,6 +79,7 @@
 - name: HS Esslingen PCobot tutorials
   organization: Hochschule Esslingen
   governance: university
+  country: de
   doc: https://robgineer.github.io/cobot/
   repo: https://github.com/robgineer/cobot
   doc_type: [handout, workshop repository]
@@ -89,6 +96,7 @@
 - name: dev-containers from articulatedrobotics
   organization: articulatedrobotics
   governance: individual
+  country: au
   doc: https://articulatedrobotics.xyz/tutorials/docker/dev-containers/
   doc_type: video
   robot: none
@@ -102,6 +110,7 @@
 - name: ros2_canopen
   organization: [ROS-Industrial,Fraunhofer IPA]
   governance: laboratory
+  country: de
   repo: https://github.com/ros-industrial/ros2_canopen
   doc: https://ros-industrial.github.io/ros2_canopen/manual/rolling/
   doc_type: documentation
@@ -119,8 +128,9 @@
   ci: true
   technology: fieldbus
 - name: Virtual Humanoid RoboCup Open Workshops 2020
-  organization: Bold Hearts
+  organization: University of Hertfordshire
   governance: university
+  country: uk
   repo: https://gitlab.com/boldhearts/ros2_workshop
   stack: Humanoid Robots
   doc_type:
@@ -136,6 +146,7 @@
 - name: ros2_control workshop 2024
   organization: osra
   governance: consortium
+  country: us
   repo: https://github.com/ros-controls/roscon2024_control_workshop/
   stack: ros2_control
   distro: rolling
@@ -153,6 +164,7 @@
   doc: https://docs.isaacsim.omniverse.nvidia.com/5.1.0/ros2_tutorials/ros2_landing_page.html
   organization: NVIDIA
   governance: company
+  country: us
   doc_type: handout
   hardware: nvidia_gpu
   stack: [ros2_control,moveit2,isaacsim]
@@ -171,6 +183,7 @@
 - name: ros2_control workshop 2025
   organization: osra
   governance: consortium
+  country: us
   repo: https://github.com/ros-controls/roscon2025_control_workshop
   stack: [ros2_control,plotjuggler]
   robot:
@@ -191,6 +204,7 @@
 - name: Ethercat ROS Driver
   organization: ICube
   governance: laboratory
+  country: fr
   repo: https://github.com/ICube-Robotics/ethercat_driver_ros2
   doc: https://icube-robotics.github.io/ethercat_driver_ros2/
   stack: ros2_control
@@ -222,6 +236,7 @@
 - name: ICube scara tutorial
   organization: ICube
   governance: laboratory
+  country: fr
   repo: https://github.com/ICube-Robotics/scara_tutorial_ros2
   doc: https://github.com/ICube-Robotics/scara_tutorial_ros2/tree/main/resources
   doc_type:
@@ -244,6 +259,7 @@
   doc: https://wiki.2rm.cnrs.fr/AnfRos2/Supports
   organization: CNRS
   governance: laboratory
+  country: fr
   language: fr
   doc_type: handout
   maintainer: not-defined
@@ -256,6 +272,7 @@
   doc: https://homepages.laas.fr/ostasse/Teaching/ROS/ros-introduction.pdf
   organization: Gepetto LAAS-CNRS
   governance: laboratory
+  country: fr
   doc_type: handout
   date: 2022
   stack: [basics,ros2_control]
@@ -266,32 +283,11 @@
   deploy_gui: not-defined
   technology:
     - other
-- name: eros4pro training
-  doc: https://ros4pro.github.io/eros4pro-training/html/day1/index.html
-  organization: University of Tartu
-  governance: university
-  robot: Ufactory xArm6
-  stack: [moveit2,nav2,gazebo,arduino]
-  language: en
-  maintainer: Yoan Mollard
-  distro: noetic
-  deploy_docker: not-defined
-  deploy_gui: not-defined
-  technology: manipulation
-- name: Clearpath ROS 2 networking workshop 2024
-  repo: https://github.com/clearpathrobotics/roscon2024-workshop-demystifying-ros2-networking/tree/main
-  organization: Clearpath Robotics
-  governance: company
-  maintainer: Clearpath Robotics
-  stack: [simple_discovery,discovery_server]
-  language: en
-  date: 2024
-  doc_type: handout
-  technology: networking
 - name: ros4pro learn
   repo: https://github.com/ros4pro/learn
   organization: Bordeaux INP # https://www.rosin-project.eu/ftp/ros4-pro
   governance: university
+  country: fr
   language: fr
   doc_type:
     - handout
@@ -305,9 +301,34 @@
   stack: [moveit,gazebo,opencv,pytorch]
   distro: noetic
   technology: [manipulation,navigation,perception]
+- name: eros4pro training
+  doc: https://ros4pro.github.io/eros4pro-training/html/day1/index.html
+  organization: University of Tartu
+  governance: university
+  country: ee
+  robot: Ufactory xArm6
+  stack: [moveit2,nav2,gazebo,arduino]
+  language: en
+  maintainer: github.com/Veix123
+  distro: noetic
+  deploy_docker: not-defined
+  deploy_gui: not-defined
+  technology: manipulation
+- name: Clearpath ROS 2 networking workshop 2024
+  repo: https://github.com/clearpathrobotics/roscon2024-workshop-demystifying-ros2-networking/tree/main
+  organization: Clearpath Robotics
+  governance: company
+  country: ca
+  maintainer: Clearpath Robotics
+  stack: [simple_discovery,discovery_server]
+  language: en
+  date: 2024
+  doc_type: handout
+  technology: networking
 - name: Nav2
   doc: https://docs.nav2.org/getting_started/index.html
-  organization: Navigation
+  organization: Open Navigation LLC
+  country: us
   language: en
   maintainer: not-defined
   distro: humble,jazzy,rolling
@@ -320,6 +341,7 @@
   repo: https://github.com/ROBOTIS-GIT/turtlebot3
   organization: ROBOTIS
   governance: company
+  country: kr
   robot: turtlebot3
   language: en
   maintainer: not-defined
@@ -335,6 +357,7 @@
   repo: https://github.com/ROBOTIS-GIT/turtlebot3_simulations
   organization: ROBOTIS
   governance: company
+  country: kr
   robot: turtlebot3
   language: en
   maintainer: not-defined
@@ -347,6 +370,7 @@
   repo: https://github.com/ROBOTIS-GIT/turtlebot3_autorace
   organization: ROBOTIS
   governance: company
+  country: kr
   doc_type: workshop repository
   robot: turtlebot3
   language: en
@@ -362,6 +386,7 @@
   repo: https://github.com/ROBOTIS-GIT/turtlebot3_applications
   organization: ROBOTIS
   governance: company
+  country: kr
   hardware:
     - jetson_nano
   robot: turtlebot3
@@ -376,10 +401,64 @@
   deploy_gui: not-defined
   ci: true
   technology: [navigation]
+- name: ROBOTIS turtlebot3 machine learning
+  repo: https://github.com/ROBOTIS-GIT/turtlebot3_machine_learning
+  robot: turtlebot3
+  organization: ROBOTIS
+  governance: company
+  country: kr
+  maintainer: ROBOTIS
+  language: en
+  distro:
+    - noetic
+    - humble
+    - jazzy
+  deploy_native: bash
+  deploy_docker: not-defined
+  deploy_gui: not-defined
+  ci: true
+  technology: [navigation]
+- name: ROBOTIS turtlebot3 manipulation
+  repo: https://github.com/ROBOTIS-GIT/turtlebot3_manipulation
+  organization: ROBOTIS
+  governance: company
+  country: kr
+  country: fr
+  language: en
+  maintainer: not-defined
+  distro:
+    - kinetic
+    - melodic
+    - noetic
+    - humble
+    - jazzy
+  deploy_native: bash
+  deploy_docker: not-defined
+  deploy_gui: not-defined
+  ci: true
+  technology: [manipulation,navigation]
+- name: ROBOTIS turtlebot3 home service challenge
+  repo: https://github.com/ROBOTIS-GIT/turtlebot3_home_service_challenge
+  organization: ROBOTIS
+  governance: company
+  country: kr
+  language: en
+  date: 2025
+  maintainer: not-defined
+  distro:
+    - noetic
+    - humble
+    - jazzy
+  deploy_native: bash
+  deploy_docker: not-defined
+  deploy_gui: not-defined
+  ci: true
+  technology: [manipulation,navigation]
 - name: Sorbonne turtlebot4 env docker
   doc: https://gitlabsu.sorbonne-universite.fr/polytech_rob/robots/turtlebot/turtlebot4_env_docker
   organization: Sorbonne Universite
   governance: university
+  country: fr
   doc_type: workshop repository
   robot: turtlebot4
   stack: [nav2,slam]
@@ -396,6 +475,7 @@
   repo: https://github.com/yguel/docker_ros2_in_practice
   organization: ICube
   governance: laboratory
+  country: fr
   language: en
   maintainer: github.com/yguel
   distro: humble
@@ -408,6 +488,7 @@
   repo: https://github.com/yguel/ros2_in_practice
   organization: ICube
   governance: laboratory
+  country: fr
   stack: [urdf,xacro,dds,communication]
   robot: scanbot
   language: [en,fr]
@@ -421,6 +502,7 @@
   repo: https://github.com/yguel/informatique_industrielle_avec_ROS2
   organization: ICube
   governance: laboratory
+  country: fr
   stack: []
   robot: [scara,pantograph]
   hardware: raspberry_pi5
@@ -432,6 +514,7 @@
   doc: https://wiki.2rm.cnrs.fr/AnfRos2/Supports?action=AttachFile&do=view&target=anf-2022-polycopie.pdf
   organization: LAAS
   governance: laboratory
+  country: fr
   language: fr
   doc_type: handout
   maintainer: not-defined
@@ -445,6 +528,7 @@
   repo: https://github.com/rplayground/sandbox
   organization: Ruffin White
   governance: individual
+  country: us
   maintainer: https://github.com/ruffsl
   language: en
   distro: humble
@@ -465,6 +549,7 @@
     - Henki robotics
     - University of Eastern Finland
   governance: company
+  country: fi
   robot: Andino robot from Ekumen
   stack: [basics,nav2]
   language: en
@@ -482,6 +567,7 @@
   doc: https://robservynov.netlify.app/tp#1
   organization: Ynov
   governance: individual
+  country: fr
   maintainer: Yoan Mollard
   doc_type: handout
   language: fr
@@ -509,59 +595,11 @@
   deploy_gui: x11local
   ci: true
   technology: [navigation]
-- name: ROBOTIS turtlebot3 machine learning
-  repo: https://github.com/ROBOTIS-GIT/turtlebot3_machine_learning
-  robot: turtlebot3
-  organization: ROBOTIS
-  governance: company
-  maintainer: ROBOTIS
-  language: en
-  distro:
-    - noetic
-    - humble
-    - jazzy
-  deploy_native: bash
-  deploy_docker: not-defined
-  deploy_gui: not-defined
-  ci: true
-  technology: [navigation]
-- name: ROBOTIS turtlebot3 manipulation
-  repo: https://github.com/ROBOTIS-GIT/turtlebot3_manipulation
-  organization: ROBOTIS
-  governance: company
-  language: en
-  maintainer: not-defined
-  distro:
-    - kinetic
-    - melodic
-    - noetic
-    - humble
-    - jazzy
-  deploy_native: bash
-  deploy_docker: not-defined
-  deploy_gui: not-defined
-  ci: true
-  technology: [manipulation,navigation]
-- name: ROBOTIS turtlebot3 home service challenge
-  repo: https://github.com/ROBOTIS-GIT/turtlebot3_home_service_challenge
-  organization: ROBOTIS
-  governance: company
-  language: en
-  date: 2025
-  maintainer: not-defined
-  distro:
-    - noetic
-    - humble
-    - jazzy
-  deploy_native: bash
-  deploy_docker: not-defined
-  deploy_gui: not-defined
-  ci: true
-  technology: [manipulation,navigation]
 - name: Moveit tutorials
   doc: https://moveit.github.io/moveit_tutorials/
   organization: PickNik Robotics
   governance: company
+  country: us
   doc_type:
     - workshop repository
     - handout
@@ -577,6 +615,7 @@
   doc: https://moveit.picknik.ai/main/doc/tutorials/
   organization: PickNik Robotics
   governance: company
+  country: us
   doc_type:
     - workshop repository
     - handout
@@ -597,6 +636,7 @@
   doc: https://sir.upc.edu/projects/ros2tutorials/final_work/index.html
   organization: Universitat Politecnica de Catalunya
   governance: university
+  country: es
   robot: UR5e
   stack: [basics,ros2_control,urdf,gazebo,rviz,moveit]
   doc_type:
@@ -614,6 +654,7 @@
   repo: https://github.com/ros-industrial/industrial_training/tree/humble/exercises
   organization: ROS-Industrial, SwRI
   governance: consortium
+  country: us
   maintainer: not-defined
   doc_type:
     - handout
@@ -630,6 +671,7 @@
   repo: https://github.com/ros-industrial-consortium/scan_n_plan_workshop
   organization: ROS-Industrial, SwRI
   governance: consortium
+  country: us
   maintainer: ROS-Industrial SwRI
   doc_type: workshop repository
   distro:
@@ -650,6 +692,7 @@
   doc_type: workshop repository
   organization: ROS-Industrial, SwRI
   governance: consortium
+  country: us
   maintainer: SwRI
   distro: not-defined
   language: en
@@ -659,6 +702,7 @@
   doc: https://tesseract-docs.readthedocs.io/en/latest/
   organization: ROS-Industrial, SwRI
   governance: consortium
+  country: us
   maintainer: SwRI
   doc_type: workspace
   distro:
@@ -677,6 +721,7 @@
   date: 2015
   organization: ROS-Industrial, SwRI
   governance: consortium
+  country: us
   robot: ABB
   stack: [descartes]
   doc_type:
@@ -693,6 +738,7 @@
   repo: https://github.com/ros-industrial/industrial_training/tree/humble/exercises/Descartes_Planning_and_Execution
   organization: ROS-Industrial, SwRI
   governance: consortium
+  country: us
   robot: UR5e
   stack: [descartes,moveit,pcl,3d_sensor]
   maintainer: Jorge Nicho
@@ -704,6 +750,7 @@
   repo: https://github.com/ros-industrial/industrial_training/tree/humble/exercises/Optimization_Based_Planning
   organization: ROS-Industrial, SwRI
   governance: consortium
+  country: us
   stack: [trajopt,pcl,3d_sensor]
   robot: KUKA iiwa
   maintainer: Matthew Powelson
@@ -717,6 +764,7 @@
   repo: https://gitlab.com/InstitutMaupertuis/ros_additive_manufacturing
   organization: Institut Maupertuis
   governance: laboratory
+  country: fr
   date: 2021
   maintainer: not-defined
   distro: melodic
@@ -729,6 +777,7 @@
   repo: https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver
   organization: Universal Robot
   governance: company
+  country: dk
   stack: [ros2_control,moveit,gazebo]
   doc_type: documentation
   maintainer: UR
@@ -748,6 +797,7 @@
   doc: https://docs.universal-robots.com/polyscopex-ros2/v10.7/index.html
   organization: Universal Robot
   governance: company
+  country: dk
   robot: UR
   stack: [polyscope_x]
   maintainer: not-defined
@@ -763,6 +813,7 @@
   status: outdated
   organization: Fraunhofer IPA
   governance: laboratory
+  country: de
   maintainer: not-defined
   distro: humble
   deploy_docker: not-defined
@@ -773,6 +824,7 @@
   doc: https://ipa326.pages.fraunhofer.de/ros-industrial/ros2_best_practices/
   organization: Fraunhofer IPA
   governance: laboratory
+  country: de
   maintainer: IPA
   distro: not-defined
   deploy_docker: not-defined
@@ -784,6 +836,7 @@
   organization:
     - Fraunhofer IPA
     - PickNik Robotics
+  country: [de,us]
   maintainer: https://github.com/henningkayser
   distro:
     - humble
@@ -796,6 +849,7 @@
   repo: https://github.com/ros-industrial/abb_robot_driver/tree/master/abb_robot_bringup_examples
   organization: ROS-Industrial, TU Delft
   governance: consortium
+  country: nl
   robot: ABB
   maintainer: not-defined
   distro: not-defined
@@ -807,6 +861,7 @@
   repo: https://gitlab.com/f2m2robserv/jazzy-ros-tiago
   robot: Tiago
   organization: not-defined
+  country: fr
   maintainer: Yoan Mollard
   distro: jazzy
   deploy_docker: not-defined
@@ -818,6 +873,7 @@
   repo: https://gitlab.com/f2m2robserv/humble-ros-tiago
   robot: Tiago
   organization: not-
+  country: fr
   maintainer: Yoan Mollard
   distro: humble
   deploy_docker: not-defined
@@ -830,6 +886,7 @@
   robot: generic
   organization: Fraunhofer IPA
   governance: laboratory
+  country: de
   maintainer: Daniel Bargmann
   distro: noetic
   deploy_docker: not-defined
@@ -839,6 +896,7 @@
 - name: IPA322 processit
   doc: not-defined
   organization: IPA
+  country: de
   maintainer: not-defined
   distro: not-defined
   deploy_docker: not-defined
@@ -855,6 +913,7 @@
     - handout
   organization: PickNik
   governance: Company
+  country: us
   maintainer: not-defined
   distro:
     - foxy
@@ -870,6 +929,7 @@
   doc_type: handout
   stack: model-based_engineering
   organization: not-defined
+  country: de
   maintainer: not-defined
   distro: not-defined
   deploy_docker: not-defined
@@ -881,6 +941,7 @@
   stack: based_engineering
   organization: CEA-List
   governance: laboratory
+  country: fr
   maintainer: not-defined
   distro: not-defined
   deploy_docker: not-defined
