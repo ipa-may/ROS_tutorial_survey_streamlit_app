@@ -267,19 +267,6 @@
   deploy_gui: not-defined
   technology:
     - other
-- name: Action nationale de formation ROS2 2022 - LAAS polycopie
-  doc: https://wiki.2rm.cnrs.fr/AnfRos2/Supports?action=AttachFile&do=view&target=anf-2022-polycopie.pdf
-  organization: LAAS
-  governance: laboratory
-  country: fr
-  language: fr
-  doc_type: handout
-  maintainer: not-defined
-  distro: humble
-  deploy_native: bash
-  deploy_docker: not-defined
-  deploy_gui: not-defined
-  technology: other
 - name: LAAS ROS introduction
   doc: https://homepages.laas.fr/ostasse/Teaching/ROS/ros-introduction.pdf
   organization: Gepetto LAAS-CNRS
@@ -304,9 +291,9 @@
     - handout
     - workshop repository
   robot:
-    - Poppy Ergo Jr
-    - Keras
-    - Turtlebot3
+    - poppy_ergo_jr
+    - keras
+    - turtlebot3
   date: 2021
   maintainer: Yoan Mollard
   stack: [moveit,gazebo,opencv,pytorch]
@@ -565,15 +552,6 @@
   docker_overlay: https://github.com/henki-robotics/robotics_essentials_ros2/blob/main/docker/Dockerfile#L14-L17
   deploy_gui: x11local
   technology: [navigation]
-- name: Cours et TPs ROS Ynov
-  doc: https://robservynov.netlify.app/tp#1
-  organization: Ynov
-  governance: individual
-  country: fr
-  maintainer: Yoan Mollard
-  doc_type: handout
-  language: fr
-  technology: other
 - name: Turtlebot behavior demos
   repo: https://github.com/sea-bass/turtlebot3_behavior_demos
   robot:
@@ -661,7 +639,7 @@
   organization: Universitat Politecnica de Catalunya
   governance: university
   country: es
-  robot: UR5e
+  robot: ur5e
   stack: [basics,ros2_control,urdf,gazebo,rviz,moveit]
   doc_type:
     - workshop repository
@@ -679,13 +657,16 @@
   organization: ROS-Industrial, SwRI
   governance: consortium
   country: us
-  maintainer: not-defined
+  stack: [trajopt,pcl,3d_sensor]
+  robot: kuka_iiwa
+  maintainer: Matthew Powelson
   doc_type:
     - handout
     - workshop repository
   distro:
     - foxy
     - humble
+    - melodic
   deploy_docker: not-defined
   deploy_gui: not-defined
   language: en
@@ -763,24 +744,10 @@
   organization: ROS-Industrial, SwRI
   governance: consortium
   country: us
-  robot: UR5e
+  robot: ur5e
   stack: [descartes,moveit,pcl,3d_sensor]
   maintainer: Jorge Nicho
   distro: humble
-  language: en
-  technology: [manipulation]
-- name: ROS-Industrial Optimization Based Planning
-  doc: https://industrial-training-master.readthedocs.io/en/latest/_source/_archives/demo3/index.html
-  repo: https://github.com/ros-industrial/industrial_training/tree/humble/exercises/Optimization_Based_Planning
-  organization: ROS-Industrial, SwRI
-  governance: consortium
-  country: us
-  stack: [trajopt,pcl,3d_sensor]
-  robot: kuka_iiwa
-  maintainer: Matthew Powelson
-  distro:
-    - melodic
-    - humble
   language: en
   technology: [manipulation]
 - name: ROS Additive Manufacturing
@@ -804,7 +771,7 @@
   country: dk
   stack: [ros2_control,moveit,gazebo]
   doc_type: documentation
-  maintainer: UR
+  maintainer: Universal Robots
   distro:
     - foxy
     - galactic
@@ -822,7 +789,7 @@
   organization: Universal Robot
   governance: company
   country: dk
-  robot: UR
+  robot: ur
   stack: [polyscope_x]
   maintainer: not-defined
   distro: not-defined
@@ -830,9 +797,8 @@
   deploy_gui: not-defined
   language: en
   technology: [manipulation]
-- name: IPA UR5e cell
+- name: Fraunhofer IPA UR5e cell
   repo: https://github.com/hellantos/ur5e_cell
-  robot: UR
   stack: [basics,moveit,ur]
   robot: ur5e
   legacy: true
@@ -845,17 +811,6 @@
   deploy_gui: not-defined
   language: en
   technology: [manipulation]
-- name: ROS 2 best practices
-  doc: https://ipa326.pages.fraunhofer.de/ros-industrial/ros2_best_practices/
-  organization: Fraunhofer IPA
-  governance: laboratory
-  country: de
-  maintainer: IPA
-  distro: not-defined
-  deploy_docker: not-defined
-  deploy_gui: not-defined
-  language: en
-  technology: other
 - name: Fraunhofer IPA & PickNik Robotics UR10e welding demo
   repo: https://github.com/PickNikRobotics/UR10e_welding_demo/pull/47
   organization:
@@ -882,78 +837,12 @@
   deploy_gui: not-defined
   language: en
   technology: [manipulation]
-- name: Jazzy Tiago
-  repo: https://gitlab.com/f2m2robserv/jazzy-ros-tiago
-  robot: Tiago
-  organization: not-defined
-  country: fr
-  maintainer: Yoan Mollard
-  distro: jazzy
-  deploy_docker: not-defined
-  deploy_gui: not-defined
-  ci: false
-  language: en
-  technology: [manipulation,navigation]
-- name: Humble Tiago
-  repo: https://gitlab.com/f2m2robserv/humble-ros-tiago
-  robot: Tiago
-  organization: not-
-  country: fr
-  maintainer: Yoan Mollard
-  distro: humble
-  deploy_docker: not-defined
-  deploy_gui: not-defined
-  language: en
-  technology: [manipulation,navigation]
-- name: pitasc
-  doc: https://pitasc.github.io/
-  stack: [pitasc]
-  robot: generic
-  organization: Fraunhofer IPA
-  governance: laboratory
-  country: de
-  maintainer: Daniel Bargmann
-  distro: noetic
-  deploy_docker: not-defined
-  deploy_gui: not-defined
-  language: en
-  technology: [manipulation]
-- name: IPA322 processit
-  doc: not-defined
-  organization: IPA
-  country: de
-  maintainer: not-defined
-  distro: not-defined
-  deploy_docker: not-defined
-  docker_image_base: https://github.com/PickNikRobotics/UR10e_welding_demo/issues
-  deploy_gui: not-defined
-  language: en
-  technology: [manipulation]
-- name: Moveit Task constructor
-  doc: https://moveit.picknik.ai/main/doc/tutorials/pick_and_place_with_moveit_task_constructor/pick_and_place_with_moveit_task_constructor.html
-  stack: [moveit_task_constructor]
-  robot: Manipulator
-  doc_type:
-    - workshop repository
-    - handout
-  organization: PickNik
-  governance: Company
-  country: us
-  maintainer: not-defined
-  distro:
-    - foxy
-    - galactic
-    - humble
-    - rolling
-  deploy_docker: not-defined
-  deploy_gui: not-defined
-  language: en
-  technology: [manipulation]
 - name: RosTooling
   doc: https://ipa320.github.io/RosTooling.github.io/
+  repo: https://github.com/ipa320/RosTooling
   doc_type: handout
   stack: model-based_engineering
-  organization: not-defined
+  organization: Fraunhofer IPA
   country: de
   maintainer: not-defined
   distro: not-defined
@@ -962,8 +851,10 @@
   language: en
   technology: software-engineering
 - name: Papyrus
-  doc: https://list.cea.fr/en/page/papyrus-outil-open-source-de-modelisation-graphique-uml/
-  stack: based_engineering
+  intro: https://list.cea.fr/en/page/papyrus-outil-open-source-de-modelisation-graphique-uml/
+  doc: https://jmbruel.github.io/sysmlpapyrusbook/
+  repo: https://github.com/jmbruel/sysmlpapyrusbook
+  stack: model-based_engineering
   organization: CEA-List
   governance: laboratory
   country: fr
@@ -972,4 +863,4 @@
   deploy_docker: not-defined
   deploy_gui: not-defined
   language: en
-  technology: other
+  technology: software-engineering
