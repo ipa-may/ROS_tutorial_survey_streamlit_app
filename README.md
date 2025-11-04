@@ -9,30 +9,32 @@ It may also deserve the purpose of pushing the adoption of Open Source Robotics 
 
 ## Description of fields qualifying the Training Material
 - `name`: Description of the Training Material
-- `organization`: Owner of the Material, ex. 
-- `organization_type`: `[company,university,laboratory,individual]`, etc, ex. 
-- `organization_country`: `[de,us,es,fr,gb,it]`, etc, ex. 
-- `maintainer`: Contact of known expert contributors/maintainers, ex. robgineer
-- `user`: Contact of known trainers/users
-- `intro`: Introduction page to the material, on e.g. ROS Discourse, ex. https://henkirobotics.com/robotics-and-ros-2-essentials-course-announcement/ https://discourse.openrobotics.org/t/mini-workshop-developing-and-teaching-ros-from-a-web-browser-using-dev-containers-and-pwas/31533
-- `doc`: Documentation URL, ex. https://robgineer.github.io/cobot/
-- `doc_type`: `[pdf, sphynx, markdown, workshop repository]`
-- `language`: `[de,en,es,fr,gb,it]`,etc
-- `technology`: `[manipulation, navigation, perception]`
-- `application`: `[welding, pickplace,palletizing,conveying]` Robotics application in the material  
-- `robot`: `[ur5e,ur10e,panda]` PCobot
-- `stack`: `[basics, ros2_control, urdf, gazebo, rviz2, moveit, moveit2, nav2, tesseract]`
-- `repo`: Code URL, ex. https://github.com/robgineer/cobot
+- `organization`: Owner of the Material
+- `date`: Creation or last major update year
+- `governance`: `[company,consortium,laboratory,university,community,individual]`, ex. Fraunhofer IPA or ICube as `laboratory`, ROS-Industrial or [ros-controls](https://control.ros.org/rolling/doc/governance/governance.html) (OSRA) as `consortium`
+- `country`: `[de,us,es,fr,gb,it]`
+- `maintainer`: Contact of known expert contributors/maintainers, e.g. GitHub handle or email
+- `user`: Contact of known trainers/users, e.g. GitHub handle or email
+- `intro`: Introduction page to the Material, e.g. on [ROS Discourse](https://discourse.openrobotics.org/t/mini-workshop-developing-and-teaching-ros-from-a-web-browser-using-dev-containers-and-pwas/31533) or organization website
+- `doc`: Documentation URL, e.g. https://robgineer.github.io/cobot/
+- `doc_type`: `[pdf, sphinx, markdown, workshop repository]`
+- `language`: `[de,en,es,fr,gb,it]`
+- `technology`: `[manipulation,navigation,perception,software-engineering,fieldbus]`, Robotics Technology covered by the Material
+- `application`: `[welding,pickplace,palletizing,conveying,humanoid]` Robotics Application covered by the Material  
+- `robot`: `[ur5e,ur10e,panda,pcobot,scara,turtlebot3]`
+- `hardware`: `[stm32_f407,raspberry_pi4,jetson_nano,nvidia_gpu,tof_vl53l1x]` Hardware, other than robot and ROS-machine (AMD64 PC) required for running the Material
+- `stack`: `[basics,ros2_control,urdf,gazebo,rviz,moveit,nav2,tesseract,opencv,pytorch]`, Robotics software Stack covered by the Material (ROS and non-ROS)
+- `repo`: Code Repository URL, e.g. https://github.com/robgineer/cobot
   - Note: Some automated scrapping is impremented for GitHub repos
-- `repo_type`: ??
-- `packages`: Software packages
-- `distro`: `[humble,jazzy,rolling]` ROS distro or other specific OS
-- `deploy_native`: `[bash,iso,fai]` (https://fai-project.org/)
-- `deploy_gui`: `[x11forward,tigervnc,webapp]`
+- `packages`: Software Packages covered by the Material
+- `distro`: `[humble,jazzy,rolling,windows10,debian12]` ROS distro or other specific OS supported by the Material
+- `deploy_native`: `[bash,ansible,iso,fai]` Method for native deployment on a machine (without container), e.g. (https://fai-project.org/)
+- `deploy_gui`: `[x11local,x11forward,tigervnc,webapp]` Method to display ROS GUI, e.g. if developing on a remote machine
 - `deploy_specifics`: `[devcontainer,virtualbox,clusterssh]`
-- `deploy_docker`: `[dockerfile,dockercompose]`
+- `deploy_docker`: `[dockerfile,dockercompose,rocker,ade]`
 - `docker_image_base`: `tiryoh/ros2-desktop-vnc:jazzy`
-- `docker_overlay`: none
+- `docker_overlay`: `[builder,dever,visualizer]`
+- `ci`: `true` Continuous Integration
 - `legacy`: `[true,false]`, The Material is not considered relevant enough anymore, and will not display on the website
 
 ## Governance

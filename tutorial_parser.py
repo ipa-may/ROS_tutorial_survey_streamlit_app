@@ -46,10 +46,10 @@ class TutorialListParser:
         """Produce a dict with display-friendly values."""
         normalized: dict[str, Any] = {}
         for key, value in record.items():
-            if key == "doc-link":
-                normalized["doc_link"] = self._normalize_value(value)
-            elif key == "repo-link":
-                normalized["repo_link"] = self._normalize_value(value)
+            if key == "doc":
+                normalized["doc"] = self._normalize_value(value)
+            elif key == "repo":
+                normalized["repo"] = self._normalize_value(value)
             else:
                 normalized[key] = self._normalize_value(value)
 
