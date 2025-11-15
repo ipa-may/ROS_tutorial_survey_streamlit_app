@@ -670,8 +670,7 @@
   deploy_docker: not-defined
   deploy_gui: not-defined
   language: en
-  technology: [manipulation]
-    - mobile robot
+  technology: [manipulation,navigation]
 - name: Scan-N-Plan workshop
   repo: https://github.com/ros-industrial-consortium/scan_n_plan_workshop
   organization: ROS-Industrial, SwRI
