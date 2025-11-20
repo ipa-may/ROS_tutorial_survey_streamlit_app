@@ -19,11 +19,16 @@ def load_app_data(path: Path | None = None) -> pd.DataFrame:
 
 
 def prepare_dataframe(dataframe: pd.DataFrame) -> pd.DataFrame:
-    """Return a copy with missing values replaced for easier display."""
-    prepared = dataframe.fillna("")
+    """Return a copy with friendly dtypes for display and filtering."""
+    prepared = dataframe.copy()
+
+    if "date" in prepared.columns:
+        prepared["date"] = pd.to_numeric(prepared["date"], errors="coerce").astype("Int16")
+
     object_columns = prepared.select_dtypes(include=["object"]).columns
     for column in object_columns:
-        prepared[column] = prepared[column].astype(str)
+        prepared[column] = prepared[column].fillna("").astype(str)
+
     return prepared
 
 
