@@ -1,16 +1,16 @@
 - name: ACM SIGSOFT Summer School for Software Engineering in Robotics 2025
   organization: [URJC, TU Delft]
   governance: university
-  country: [es,nl]
+  country: [es, nl]
   date: 2025
   repo: [https://github.com/IntelligentRoboticsLabs/docker_infrastructure]
   doc: https://kas-lab.github.io/se_robotics_school/2025/
   language: en
-  technology: [navigation,manipulation,software-engineering,task-planning]
+  technology: [navigation, manipulation, software-engineering, task-planning]
   application: autonomous-navigation
   robot: Mirte
-  hardware: 
-  stack: [ros_basics,pddl,smc_storm,nav2]
+  hardware:
+  stack: [ros_basics, pddl, smc_storm, nav2]
   deploy_docker: dockerfile
   docker_image_base: ghcr.io/kas-lab/mirte_playground:main
 - name: Automated and Connected Driving Course Notebooks
@@ -20,13 +20,30 @@
   date: 2023
   repo: https://github.com/ika-rwth-aachen/acdc-notebooks
   language: en
-  technology: [navigation,perception]
+  technology: [navigation, perception]
   application: [autonomous-driving]
   robot: [ackermann]
   hardware: []
-  stack: [ros_basics,sensor_data_processing,object_fusion,trajectory_planning,trajectory_control]
+  stack:
+    [
+      ros_basics,
+      sensor_data_processing,
+      object_fusion,
+      trajectory_planning,
+      trajectory_control,
+    ]
   distro: noetic
   deploy_docker: dockerfile
+- name: ROSCon 2022 workshop on ros2_control
+  organization: ros-controls
+  governance: consortium
+  date: 2022
+  doc_type: workshop repository
+  language: en
+  distro: humble
+  technology: [manipulation, navigation]
+  stack: [ros2_control, urdf]
+  maintainer: Denis Stogl
 - name: yolo_ros - ROS 2 wrap for YOLO models from Ultralytics
   organization: Universidad de León
   governance: university
@@ -55,7 +72,7 @@
   application: [education]
   robot: [Kobuki]
   hardware: []
-  stack: [ros_basics,urdf,gazebo,nav2]
+  stack: [ros_basics, urdf, gazebo, nav2]
   distro: jazzy
   maintainer: José Miguel Guerrero
 - name: Computer Vision at URJC
@@ -67,11 +84,11 @@
   repo: https://github.com/jmguerreroh/vision
   doc_type: [handout, workshop repository]
   language: es
-  technology: [perception,machine_learning]
+  technology: [perception, machine_learning]
   application: [education]
   robot: [Kobuki]
   hardware: []
-  stack: [opencv,pcl]
+  stack: [opencv, pcl]
   distro: [jazzy, rolling]
   maintainer: José Miguel Guerrero
   ci: true
@@ -86,7 +103,7 @@
   application: [education]
   robot: [turtlebot3]
   hardware: []
-  stack: [ros_basics,urdf,gazebo,nav2]
+  stack: [ros_basics, urdf, gazebo, nav2]
   distro: humble
 - name: HS Esslingen PCobot tutorials
   organization: Hochschule Esslingen
@@ -97,16 +114,16 @@
   repo: https://github.com/robgineer/cobot
   doc_type: [handout, workshop repository]
   language: en
-  technology: [manipulation,calibration,path-planning]
-  application: [education,hand-eye-calibration]
+  technology: [manipulation, calibration, path-planning]
+  application: [education, hand-eye-calibration]
   robot: [festo_pcobot]
   hardware: []
-  stack: [ros_basics,ros2_control,urdf,gazebo,rviz,moveit,opencv]
+  stack: [ros_basics, ros2_control, urdf, gazebo, rviz, moveit, opencv]
   distro: jazzy
   deploy_specifics: devcontainer
   deploy_docker: dockerfile
   docker_image_base: tiryoh/ros2-desktop-vnc:jazzy
-  deploy_gui: [novnc,x11forward]
+  deploy_gui: [novnc, x11forward]
 - name: dev-containers tutorial
   organization: articulatedrobotics
   governance: individual
@@ -114,7 +131,7 @@
   doc: https://articulatedrobotics.xyz/tutorials/docker/dev-containers/
   doc_type: video
   technology: software-engineering
-  robot: 
+  robot:
   language: en
   maintainer: articulatedrobotics
   distro: not-defined
@@ -122,7 +139,7 @@
   deploy_docker: dockerfile
   deploy_gui: not-defined
 - name: ros2_canopen
-  organization: [ROS-Industrial,Fraunhofer IPA]
+  organization: [ROS-Industrial, Fraunhofer IPA]
   governance: laboratory
   country: de
   repo: https://github.com/ros-industrial/ros2_canopen
@@ -130,7 +147,7 @@
   doc_type: documentation
   date: 2025
   technology: fieldbus
-  stack: [ros2_control,canopen]
+  stack: [ros2_control, canopen]
   language: en
   maintainer: gihub.com/ipa-vsp
   distro:
@@ -139,24 +156,24 @@
     - rolling
   deploy_docker: dockerfile
   docker_image_base: ros:${ROS_DISTRO}-ros-core
-  deploy_gui: 
+  deploy_gui:
   ci: true
 - name: Virtual Humanoid RoboCup Open Workshops 2020
   organization: University of Hertfordshire
   governance: university
   country: uk
   repo: https://gitlab.com/boldhearts/ros2_workshop
-  technology: [ros_advanced,behavior]
-  application: [humanoid,competition,education]
+  technology: [ros_advanced, behavior]
+  application: [humanoid, competition, education]
   robot: [boldbot]
   hardware: []
-  stack: [quality_of_service,node_composition,gazebo]
+  stack: [quality_of_service, node_composition, gazebo]
   doc_type:
     - workshop repository
   date: 2020
   maintainer: not-defined
   distro: foxy
-  deploy_docker: [dockerfile,ade] # https://ade-cli.readthedocs.io/en/latest/
+  deploy_docker: [dockerfile, ade] # https://ade-cli.readthedocs.io/en/latest/
   docker_image_base: ros:foxy
   ci: true
   language: en
@@ -168,7 +185,7 @@
   doc_type:
     - workshop repository
   language: en
-  technology: [manipulation,navigation]
+  technology: [manipulation, navigation]
   application: [education]
   robot: tiago
   hardware: []
@@ -185,11 +202,11 @@
   governance: consortium
   country: us
   doc_type: workshop repository
-  technology: [manipulation,navigation,mock_hardware,pal_statistics]
+  technology: [manipulation, navigation, mock_hardware, pal_statistics]
   application: [mobile-manipulation]
-  robot: [turtlebot3,wbot]
-  hardware: [esp32,gripper]
-  stack: [ros2_control,plotjuggler,zenoh_pico]
+  robot: [turtlebot3, wbot]
+  hardware: [esp32, gripper]
+  stack: [ros2_control, plotjuggler, zenoh_pico]
   repo: https://github.com/ros-controls/roscon2025_control_workshop
   maintainer: Bence Magyar
   distro: jazzy
@@ -197,7 +214,7 @@
     - dockerfile
     - docker-compose
   docker_image_base: ros:jazzy-ros-core
-  deploy_gui: 
+  deploy_gui:
   language: en
 - name: IsaacSim ROS tutorial
   doc: https://docs.isaacsim.omniverse.nvidia.com/5.1.0/ros2_tutorials/ros2_landing_page.html
@@ -205,11 +222,11 @@
   governance: company
   country: us
   doc_type: handout
-  technology: [manipulation,rmw]
+  technology: [manipulation, rmw]
   application: []
   robot: []
   hardware: [nvidia_gpu]
-  stack: [ros2_control,moveit2,isaacsim,fastrtps,cyclonedds]
+  stack: [ros2_control, moveit2, isaacsim, fastrtps, cyclonedds]
   distro:
     - humble
     - jazzy
@@ -225,12 +242,12 @@
   organization: ICube
   governance: laboratory
   country: fr
-  technology: [manipulation,navigation]
-  stack: [urdf,xacro,dds,communication]
+  technology: [manipulation, navigation]
+  stack: [urdf, xacro, dds, communication]
   robot: scanbot
-  language: [en,fr]
+  language: [en, fr]
   maintainer: github.com/yguel
-  distro: [humble,windows]
+  distro: [humble, windows]
   deploy_docker: https://github.com/yguel/docker_ros2_in_practice
 - name: Informatique industrielle avec ROS2
   doc: https://yguel.github.io/informatique_industrielle_avec_ROS2/
@@ -241,7 +258,7 @@
   country: fr
   technology: [manipulation]
   stack: []
-  robot: [icube_scara,pantograph]
+  robot: [icube_scara, pantograph]
   hardware: raspberry_pi5
   language: [fr]
   maintainer: github.com/yguel
@@ -256,7 +273,7 @@
   distro: humble
   deploy_docker: dockerfile
   docker_image_base: tiryoh/ros2-desktop-vnc:humble
-  deploy_gui: [x11vnc,html5,novnc]
+  deploy_gui: [x11vnc, html5, novnc]
 - name: ICube scara tutorial
   organization: ICube
   governance: laboratory
@@ -272,7 +289,7 @@
   application: education
   robot: icube_scara
   technology: manipulation
-  stack: [ros2_control,urdf,gazebo,rviz,moveit]
+  stack: [ros2_control, urdf, gazebo, rviz, moveit]
   distro: humble
   deploy_native: bash
   deploy_specifics:
@@ -288,11 +305,11 @@
   doc: https://icube-robotics.github.io/ecat_ros2_workshop/
   doc_type: documentation
   language: en
-  technology: [fieldbus,safety]
-  application: [education,safety]
+  technology: [fieldbus, safety]
+  application: [education, safety]
   robot: []
   hardware: [cia402_motor]
-  stack: [ros2_control,ethercat,fail-safe_over_ethercat]
+  stack: [ros2_control, ethercat, fail-safe_over_ethercat]
   repo: https://github.com/ICube-Robotics/ecat_ros2_workshop
   distro: [jazzy]
   deploy_docker: dockerfile
@@ -311,14 +328,14 @@
   application: []
   robot: []
   hardware: []
-  stack: [ros2_control,ethercat]
+  stack: [ros2_control, ethercat]
   repo: https://github.com/ICube-Robotics/ethercat_driver_ros2
   distro: [humble]
   ci: true
 - name: micro ros openmanipulator
   organization: micro-ROS
   governance: community
-  maintainer: 
+  maintainer:
   doc: https://micro.ros.org/docs/tutorials/demos/openmanipulator_demo/
   doc_type:
     - workshop repository
@@ -332,7 +349,7 @@
     - stm32_f407
     - raspberry_pi4
     - tof_vl53l1x
-  stack: [ros2_control,micro-ros,urdf,gazebo,rviz,moveit]
+  stack: [ros2_control, micro-ros, urdf, gazebo, rviz, moveit]
   distro: dashing
 - name: Action nationale de formation ROS2 2022
   doc: https://wiki.2rm.cnrs.fr/AnfRos2/Supports
@@ -345,7 +362,7 @@
   application: [education]
   robot: [icube_scara]
   hardware: []
-  stack: [ros-basics,ros_control]
+  stack: [ros-basics, ros_control]
   maintainer: not-defined
   distro: humble
   deploy_docker: not-defined
@@ -361,7 +378,7 @@
   language: fr
   technology:
     - other
-  stack: [ros_basics,ros2_control]
+  stack: [ros_basics, ros2_control]
   distro: humble
   deploy_specifics: Virtualbox
 - name: ros4pro learn
@@ -373,13 +390,13 @@
   doc_type:
     - handout
     - workshop repository
-  technology: [manipulation,navigation,perception]
+  technology: [manipulation, navigation, perception]
   robot:
     - poppy_ergo_jr
     - keras
     - turtlebot3
   maintainer: Yoan Mollard
-  stack: [moveit,gazebo,opencv,pytorch]
+  stack: [moveit, gazebo, opencv, pytorch]
   repo: https://github.com/ros4pro/learn
   distro: noetic
 - name: eros4pro training
@@ -389,7 +406,7 @@
   country: ee
   technology: manipulation
   robot: Ufactory xArm6
-  stack: [moveit2,nav2,gazebo,arduino]
+  stack: [moveit2, nav2, gazebo, arduino]
   language: en
   maintainer: github.com/Veix123
   distro: noetic
@@ -402,7 +419,7 @@
   country: ca
   maintainer: Clearpath Robotics
   technology: networking
-  stack: [simple_discovery,discovery_server]
+  stack: [simple_discovery, discovery_server]
   language: en
   date: 2024
   doc_type: handout
@@ -426,7 +443,7 @@
   governance: company
   country: kr
   technology: [navigation]
-  application : [education,competition]
+  application: [education, competition]
   robot: turtlebot3
   language: en
   maintainer: not-defined
@@ -444,7 +461,7 @@
   governance: company
   country: kr
   technology: [navigation]
-  application : [education,competition]
+  application: [education, competition]
   robot: turtlebot3
   language: en
   maintainer: not-defined
@@ -460,7 +477,7 @@
   country: kr
   doc_type: workshop repository
   technology: [navigation]
-  application : [education,competition]
+  application: [education, competition]
   robot: turtlebot3
   language: en
   maintainer: not-defined
@@ -477,7 +494,7 @@
   governance: company
   country: kr
   technology: [navigation]
-  application : [education]
+  application: [education]
   hardware:
     - jetson_nano
   robot: turtlebot3
@@ -498,8 +515,8 @@
   country: kr
   maintainer: ROBOTIS
   language: en
-  technology: [navigation,machine_learning]
-  application : [education,competition]
+  technology: [navigation, machine_learning]
+  application: [education, competition]
   robot: turtlebot3
   distro:
     - noetic
@@ -516,8 +533,8 @@
   country: kr
   language: en
   maintainer: not-defined
-  technology: [manipulation,navigation]
-  application: [education,competition,mobile-manipulation]
+  technology: [manipulation, navigation]
+  application: [education, competition, mobile-manipulation]
   distro:
     - kinetic
     - melodic
@@ -536,8 +553,8 @@
   language: en
   date: 2025
   maintainer: not-defined
-  technology: [manipulation,navigation]
-  application: [education,competition,home-service]
+  technology: [manipulation, navigation]
+  application: [education, competition, home-service]
   distro:
     - noetic
     - humble
@@ -555,7 +572,7 @@
   technology: [navigation]
   application: [education]
   robot: turtlebot4
-  stack: [nav2,slam]
+  stack: [nav2, slam]
   language: en
   maintainer: not-defined
   distro: humble
@@ -571,11 +588,11 @@
   country: us
   maintainer: https://github.com/ruffsl
   language: en
-  technology: [navigation,web]
-  application: [education,surveillance]
+  technology: [navigation, web]
+  application: [education, surveillance]
   robot: [turtlebot3]
   hardware: []
-  stack: [nav2,foxglove,rviz2]
+  stack: [nav2, foxglove, rviz2]
   repo: https://github.com/rplayground/sandbox
   distro: humble
   deploy_specifics: devcontainer
@@ -596,14 +613,14 @@
   governance: company
   country: fi
   technology: [navigation]
-  application: [education,surveillance]
+  application: [education, surveillance]
   robot: [ekumen_andino]
   hardware: []
-  stack: [ros_basics,nav2]
+  stack: [ros_basics, nav2]
   language: en
   maintainer: not-defined
   distro: humble
-  deploy_native: [bash,ansible]
+  deploy_native: [bash, ansible]
   deploy_docker:
     - dockerfile
     - docker-compose
@@ -616,11 +633,11 @@
   governance: individual
   language: en
   maintainer: https://github.com/sea-bass/
-  technology: [navigation,task-planning]
-  application: [education,search-rescue]
-  robot: [turtlebot3,turtlebot4]
+  technology: [navigation, task-planning]
+  application: [education, search-rescue]
+  robot: [turtlebot3, turtlebot4]
   hardware: []
-  stack: [nav2,behavior_tree_cpp,py_tree]
+  stack: [nav2, behavior_tree_cpp, py_tree]
   distro:
     - humble
     - jazzy
@@ -662,10 +679,10 @@
   governance: community
   country: us
   technology: [manipulation]
-  application: [education,pick-place]
+  application: [education, pick-place]
   robot: [franka_panda]
   hardware: []
-  stack: [moveit,moveit_task_constructor]
+  stack: [moveit, moveit_task_constructor]
   doc_type: sphinx
   language: en
   maintainer: github.com/rhaschke
@@ -682,10 +699,10 @@
   governance: company
   country: us
   technology: [manipulation]
-  application: [education,pick-place]
+  application: [education, pick-place]
   robot: [franka_panda]
   hardware: []
-  stack: [moveit2,moveit_task_constructor]
+  stack: [moveit2, moveit_task_constructor]
   doc_type:
     - workshop repository
     - handout
@@ -708,11 +725,18 @@
   date: 2018
   governance: consortium
   country: jp
-  technology: [manipulation,bi-manipulation,perception,impedance-control,task-planning]
-  application: [competition,assembly]
+  technology:
+    [
+      manipulation,
+      bi-manipulation,
+      perception,
+      impedance-control,
+      task-planning,
+    ]
+  application: [competition, assembly]
   robot: [ur5e]
-  hardware: [Robotiq-2F-85,Robotiq-2F-140,screwing,dynamixel-xl-320,camera]
-  stack: [moveit,moveit_task_constructor,tf]
+  hardware: [Robotiq-2F-85, Robotiq-2F-140, screwing, dynamixel-xl-320, camera]
+  stack: [moveit, moveit_task_constructor, tf]
   doc: https://github.com/o2ac/o2ac-ur/wiki
   doc_type: github-wiki
   language: en
@@ -731,11 +755,18 @@
   date: 2020
   governance: consortium
   country: jp
-  technology: [manipulation,bi-manipulation,perception,impedance-control,task-planning]
-  application: [competition,assembly]
+  technology:
+    [
+      manipulation,
+      bi-manipulation,
+      perception,
+      impedance-control,
+      task-planning,
+    ]
+  application: [competition, assembly]
   robot: [ur5e]
-  hardware: [Robotiq-2F-85,Robotiq-2F-140,screwing,dynamixel-xl-320,camera]
-  stack: [moveit,moveit_task_constructor,tf]
+  hardware: [Robotiq-2F-85, Robotiq-2F-140, screwing, dynamixel-xl-320, camera]
+  stack: [moveit, moveit_task_constructor, tf]
   doc: https://github.com/o2as/ur-o2as/wiki
   doc_type: github-wiki
   language: en
@@ -757,7 +788,7 @@
   application: []
   robot: [ur5e]
   hardware: []
-  stack: [ros_basics,ros2_control,urdf,gazebo,rviz,moveit]
+  stack: [ros_basics, ros2_control, urdf, gazebo, rviz, moveit]
   doc_type:
     - workshop repository
     - handout
@@ -773,11 +804,35 @@
   organization: ROS-Industrial, SwRI
   governance: consortium
   country: us
-  technology: [manipulation,navigation,optimization-based-path-planning,grasp-planning,perception]
-  application: [pick-place,industrial-demo]
+  technology:
+    [
+      manipulation,
+      navigation,
+      optimization-based-path-planning,
+      grasp-planning,
+      perception,
+    ]
+  application: [pick-place, industrial-demo]
   robot: [kuka_iiwa]
-  hardware: [Acromag 951ELN-4012,schunk-WSG050,Asus-Xtion-Pro,kinect]
-  stack: [ros_basics,moveit,trajopt,tesseract,3d_sensor,descartes,stomp,modbus,ros1-ros2-bridge,industrial_calibration,urdf,xacro,rviz,opencv,pcl]
+  hardware: [Acromag 951ELN-4012, schunk-WSG050, Asus-Xtion-Pro, kinect]
+  stack:
+    [
+      ros_basics,
+      moveit,
+      trajopt,
+      tesseract,
+      3d_sensor,
+      descartes,
+      stomp,
+      modbus,
+      ros1-ros2-bridge,
+      industrial_calibration,
+      urdf,
+      xacro,
+      rviz,
+      opencv,
+      pcl,
+    ]
   maintainer: Matthew Powelson
   doc_type:
     - handout
@@ -798,11 +853,30 @@
   maintainer: ROS-Industrial SwRI
   doc: https://ros-industrial-consortium.github.io/scan_n_plan_workshop
   doc_type: workshop repository
-  technology: [manipulation,optimization-based-path-planning,perception,tool-path-planning,surface-reconstruction]
-  application: [scan-plan,surface-processing,industrial-demo]
+  technology:
+    [
+      manipulation,
+      optimization-based-path-planning,
+      perception,
+      tool-path-planning,
+      surface-reconstruction,
+    ]
+  application: [scan-plan, surface-processing, industrial-demo]
   robot: []
   hardware: []
-  stack: [moveit,ompl,trajopt,tesseract,3d_sensor,descartes,industrial_calibration,industrial_reconstruction,behavior_tree_cpp,noether]
+  stack:
+    [
+      moveit,
+      ompl,
+      trajopt,
+      tesseract,
+      3d_sensor,
+      descartes,
+      industrial_calibration,
+      industrial_reconstruction,
+      behavior_tree_cpp,
+      noether,
+    ]
   distro:
     - humble
     - jazzy
@@ -834,7 +908,7 @@
   maintainer: SwRI
   doc_type: workspace
   technology: [manipulation]
-  application: [optimization-based-path-planning,industrial-demo]
+  application: [optimization-based-path-planning, industrial-demo]
   stack: [tesseract]
   distro:
     - foxy
@@ -853,7 +927,7 @@
   governance: consortium
   country: us
   technology: [manipulation]
-  application: [optimization-based-path-planning,industrial-demo]
+  application: [optimization-based-path-planning, industrial-demo]
   robot: ABB
   stack: [descartes]
   doc_type:
@@ -872,7 +946,7 @@
   country: us
   technology: [manipulation]
   robot: ur5e
-  stack: [descartes,moveit,pcl,3d_sensor]
+  stack: [descartes, moveit, pcl, 3d_sensor]
   maintainer: Jorge Nicho
   distro: humble
   language: en
@@ -899,7 +973,7 @@
   organization: Universal Robot
   governance: company
   country: dk
-  stack: [ros2_control,moveit,gazebo]
+  stack: [ros2_control, moveit, gazebo]
   doc_type: documentation
   maintainer: Universal Robots
   distro:
@@ -929,7 +1003,7 @@
   technology: [manipulation]
 - name: Fraunhofer IPA UR5e cell
   repo: https://github.com/hellantos/ur5e_cell
-  stack: [ros_basics,moveit,ur]
+  stack: [ros_basics, moveit, ur]
   robot: ur5e
   legacy: true
   organization: Fraunhofer IPA
@@ -946,18 +1020,18 @@
   organization:
     - Fraunhofer IPA
     - PickNik Robotics
-  country: [de,us]
-  technology: [manipulation,perception,hybrid-planning]
-  application: [welding,visual-servoing]
+  country: [de, us]
+  technology: [manipulation, perception, hybrid-planning]
+  application: [welding, visual-servoing]
   robot: [ur10e]
-  hardware: [welding_gun_lorch,scancontrol_3000]
-  stack: [moveit,moveit_task_constructor,moveit_servo]
+  hardware: [welding_gun_lorch, scancontrol_3000]
+  stack: [moveit, moveit_task_constructor, moveit_servo]
   distro:
     - humble
     - rolling
   deploy_docker: not-defined
   deploy_gui: not-defined
-  language: en 
+  language: en
 - name: ABB bringup examples
   repo: https://github.com/ros-industrial/abb_robot_driver/tree/master/abb_robot_bringup_examples
   organization: ROS-Industrial, TU Delft
