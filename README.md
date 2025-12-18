@@ -1,13 +1,14 @@
 # ROS Training Material Survey
 
 ## Why this repo ?
+
 The repo was created by Yasmine Makkaoui (Fraunhofer IPA) and Gauthier Hentz (Université de Strasbourg) as a contribution to their talk at ROSCon FR&DE 2025 entitled "How to start teaching ROS2 in 2025 ?"
 Its aim is to help people find most relevant Material when starting to Teach and Use Open Source Robotics with the diversity of technologies, applications, hardware and software stacks available.
 We hope it will push external contributions to the best Open Source Robotics Training Material.
 It may also deserve the purpose of pushing the adoption of Open Source Robotics Toolchains for demonstrations and industrial applications.
 
-
 ## Description of fields qualifying the Training Material
+
 - `name`: Description of the Training Material
 - `organization`: Owner of the Material
 - `date`: Creation or last major update year
@@ -20,7 +21,7 @@ It may also deserve the purpose of pushing the adoption of Open Source Robotics 
 - `doc_type`: `[pdf, sphinx, markdown, workshop repository]`
 - `language`: `[de,en,es,fr,gb,it]`
 - `technology`: `[manipulation,navigation,perception,software-engineering,fieldbus]`, Robotics Technology covered by the Material
-- `application`: `[welding,pickplace,palletizing,conveying,humanoid]` Robotics Application covered by the Material  
+- `application`: `[welding,pickplace,palletizing,conveying,humanoid]` Robotics Application covered by the Material
 - `robot`: `[ur5e,ur10e,panda,pcobot,scara,turtlebot3]`
 - `hardware`: `[stm32_f407,raspberry_pi4,jetson_nano,nvidia_gpu,tof_vl53l1x]` Hardware, other than robot and ROS-machine (AMD64 PC) required for running the Material
 - `stack`: `[basics,ros2_control,urdf,gazebo,rviz,moveit,nav2,tesseract,opencv,pytorch]`, Robotics software Stack covered by the Material (ROS and non-ROS)
@@ -37,21 +38,19 @@ It may also deserve the purpose of pushing the adoption of Open Source Robotics 
 - `ci`: `true` Continuous Integration
 - `legacy`: `[true,false]`, The Material is not considered relevant enough anymore, and will not display on the website
 
-## Governance
-This repo is hosted under https://github.com/ROS-French-Users-Group which currently gathers French speaking researchers, teachers and engineers from different institutions, mostly public Research Institutes and Universities. This GitHub organization is cross-organizational and closely related to the Association [FUSER](https://discourse.openrobotics.org/t/association-francophone-des-utilisateurs-du-systeme-dexploitation-robotique/37918) founded to help people organize ROSConFR. 
-Permissions on the repo are shared with the ROS-Industrial organization https://github.com/ros-industrial/, which gathers mostly Ros Community members from the USA, Germany, the Netherlands, Austria, Singapore and Japan. ROS-Industrial consists of three consortia led by Frauhofer IPA in Stuttgart, Germany for the Consortium Europe, South-West Research Institute in San Antonio, USA for the Consortium North-America and ARTC in Singapore for the Consortium Asia-Pacific, see https://rosindustrial.org/ric-eu . We hope the criteria below will enable objective maintenance of the recommended Material.
-
 ## Criteria
 
 The criteria for Material to be included in the list are as follows:
+
 - Material should be Open Source, under licence... and theirs maintainers open to relevant contribution.
 - We do not include Material dedicated to very specific software packages, such as a driver user documentation, but rather focus on Material that enables solving a robotics application.
 - We do include Material provided by the ROS Stack communities (WG), e.g. ROS2, Nav2, MoveIt2, ROS2-Control Tutorials, as they serve as a primary reference for many other Material, and it allows to follow and compare their Best Practices.
 - Ideally, there should be a public reference to the Material (e.g. on its organization website, or on Open Robotics Discourse) to prevent us from advertising material that "is not really Open Source" or presents a high "risk to disappear".
-- We encourage even recent initiatives even if they have not proven long term maintenance. Hence, we think these are the ones that require high visibility to develop a community. 
+- We encourage even recent initiatives even if they have not proven long term maintenance. Hence, we think these are the ones that require high visibility to develop a community.
 - Material that is not considered relevant anymore will be marked as `legacy` and removed from the published website. Legacy Material will still be searchable from the `.yaml` file.
 
 Criteria considered for evaluating the relevance of Material:
+
 - Sufficiently maintained: number of maintainers, contributors, last contribution date, ROS distro, open to contribution
 - Popular: number of users, github stars, maintained by reknown ROS contributor
 - Doc or Repo relative quality : better than that of other Materials covering similar contents
@@ -60,8 +59,9 @@ Criteria considered for evaluating the relevance of Material:
 - Good quality repo: distro coverage, easy deployment
 
 # Contribute to ROS Tutorial Catalog
+
 If suggesting a relevant change, make sure to hint how you're related to the Material. Are you a Maintainer ? A member of the organization ? A User ? A simple tester ?
-Send a Pull Request with additions, modifications or removals. 
+Send a Pull Request with additions, modifications or removals.
 
 Streamlit interface for exploring tutorials listed in [`tutorial_list.yaml`](tutorial_list.yaml). Use the options below to run and develop the app with Docker Compose, VS Code Dev Containers, or a local Python environment.
 
